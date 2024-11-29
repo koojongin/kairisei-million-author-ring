@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   description: '밀리언 아서 : 링',
 }
 
-export const cls = (...classnames: string[]) => {
+const cls = (...classnames: string[]) => {
   return classnames.join(' ')
 }
 
