@@ -45,7 +45,7 @@ export default function Home() {
   )
 }
 
-export function MACardList() {
+function MACardList({}: any) {
   return (
     <div
       className={
@@ -53,14 +53,15 @@ export function MACardList() {
       }
     >
       {new Array(92).fill(1).map((key, index) => {
+        const number = index + 1
         // eslint-disable-next-line react/jsx-key
-        return <MACardBox number={index + 1} />
+        return <MACardBox number={number} />
       })}
     </div>
   )
 }
 
-export function MACardBox({ number }: { number: number }) {
+function MACardBox({ number }: any) {
   return (
     <div
       key={createKey()}

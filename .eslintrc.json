@@ -7,7 +7,8 @@
   "rules": {
     "no-console": "warn",
     "@typescript-eslint/no-duplicate-enum-values": "off",
-    "no-dupe-class-members": "off"
+    "no-dupe-class-members": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }
 
