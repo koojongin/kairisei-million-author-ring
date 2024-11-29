@@ -8,7 +8,8 @@
     "no-console": "warn",
     "@typescript-eslint/no-duplicate-enum-values": "off",
     "no-dupe-class-members": "off",
-    "@typescript-eslint/no-explicit-any": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off"
   }
 }
 
