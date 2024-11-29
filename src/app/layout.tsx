@@ -46,7 +46,7 @@ export default function RootLayout({
           className={
             'bg-center bg-cover min-w-full h-full absolute -z-10 opacity-10'
           }
-          style={{ backgroundImage: `url('/img/bg.jpg')` }}
+          style={{ backgroundImage: `url('/img/bg-low.jpg')` }}
         ></div>
         {children}
       </body>
