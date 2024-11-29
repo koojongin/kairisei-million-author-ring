@@ -3,5 +3,11 @@
     "next/core-web-vitals",
     "next/typescript",
     "plugin:@next/next/recommended"
-  ]
+  ],
+  "rules": {
+    "no-console": "warn",
+    "@typescript-eslint/no-duplicate-enum-values": "off",
+    "no-dupe-class-members": "off"
+  }
 }
+

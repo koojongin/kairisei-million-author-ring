@@ -53,6 +53,7 @@ export function MACardList() {
       }
     >
       {new Array(92).fill(1).map((key, index) => {
+        // eslint-disable-next-line react/jsx-key
         return <MACardBox number={index + 1} />
       })}
     </div>
