@@ -30,7 +30,7 @@ export interface MACard {
 }
 
 export const MACardDict: {
-  [key: any]: MACard
+  [key: string]: MACard
 } = {
   1: {
     name: '감사형 우아사하',

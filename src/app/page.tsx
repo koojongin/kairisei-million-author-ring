@@ -4,28 +4,32 @@ import { MACardDict, MAGrade, MAJobKind, MASkillType } from '@/app/const/cards'
 import { useEffect, useState } from 'react'
 import _ from 'lodash'
 
+type CheckBoxGroup = {
+  [key: string]: boolean
+}
+
 export default function Home() {
   const costs = [5, 4, 3, 2, 1]
-  const [checkedCosts, setCheckedCosts] = useState(
+  const [checkedCosts, setCheckedCosts] = useState<CheckBoxGroup>(
     costs.reduce((acc, costNumber) => ({ ...acc, [costNumber]: true }), {}),
   )
 
-  const [checkedGrades, setCheckedGrades] = useState(
+  const [checkedGrades, setCheckedGrades] = useState<CheckBoxGroup>(
     Object.keys(MAGrade).reduce((acc, key) => ({ ...acc, [key]: true }), {}),
   )
 
-  const [checkedJobKinds, setCheckedJobKinds] = useState(
+  const [checkedJobKinds, setCheckedJobKinds] = useState<CheckBoxGroup>(
     Object.keys(MAJobKind).reduce((acc, key) => ({ ...acc, [key]: true }), {}),
   )
 
-  const [checkedSkillTypes, setCheckedSkillTypes] = useState(
+  const [checkedSkillTypes, setCheckedSkillTypes] = useState<CheckBoxGroup>(
     Object.keys(MASkillType).reduce(
       (acc, key) => ({ ...acc, [key]: true }),
       {},
     ),
   )
 
-  const handleChangeCost = (event) => {
+  const handleChangeCost = (event: any) => {
     const { name, checked } = event.target
     setCheckedCosts((prev) => ({
       ...prev,
@@ -33,7 +37,7 @@ export default function Home() {
     }))
   }
 
-  const handleChangeGrade = (event) => {
+  const handleChangeGrade = (event: any) => {
     const { name, checked } = event.target
     setCheckedGrades((prev) => ({
       ...prev,
@@ -41,7 +45,7 @@ export default function Home() {
     }))
   }
 
-  const handleChangeJobKind = (event) => {
+  const handleChangeJobKind = (event: any) => {
     const { name, checked } = event.target
     setCheckedJobKinds((prev) => ({
       ...prev,
@@ -49,7 +53,7 @@ export default function Home() {
     }))
   }
 
-  const handleChangeSkillType = (event) => {
+  const handleChangeSkillType = (event: any) => {
     const { name, checked } = event.target
     setCheckedSkillTypes((prev) => ({
       ...prev,
@@ -215,7 +219,7 @@ function MACardList({
   checkedSkillTypes,
 }: any) {
   const TOTAL_CARDS_COUNT = 92
-  const [cards, setCards] = useState([])
+  const [cards, setCards] = useState<any>([])
 
   useEffect(() => {
     setCards(
@@ -251,14 +255,14 @@ function MACardList({
           'bg-white border-gray-400 border flex px-[10px] rounded font-bold'
         }
       >
-        {cards.filter((data) => !!data).length}/{TOTAL_CARDS_COUNT}
+        {cards.filter((data: any) => !!data).length}/{TOTAL_CARDS_COUNT}
       </div>
       <div
         className={
           'flex flex-wrap gap-[4px] justify-center bg-white border-gray-300 border-x border-y rounded-md py-[12px]'
         }
       >
-        {cards.map((key, index) => {
+        {cards.map((key: any, index: number) => {
           if (key === true)
             return <MACardBox number={index + 1} key={createKey()} />
           else return <></>
