@@ -1,7 +1,62 @@
+'use client'
 import createKey from '@/app/services/key-generator'
-import { MACardNumber } from '@/app/const/ma-card-number.enum'
+import { MACardDict, MAGrade, MAJobKind, MASkillType } from '@/app/const/cards'
+import { useEffect, useState } from 'react'
+import _ from 'lodash'
 
 export default function Home() {
+  const costs = [5, 4, 3, 2, 1]
+  const [checkedCosts, setCheckedCosts] = useState(
+    costs.reduce((acc, costNumber) => ({ ...acc, [costNumber]: true }), {}),
+  )
+
+  const [checkedGrades, setCheckedGrades] = useState(
+    Object.keys(MAGrade).reduce((acc, key) => ({ ...acc, [key]: true }), {}),
+  )
+
+  const [checkedJobKinds, setCheckedJobKinds] = useState(
+    Object.keys(MAJobKind).reduce((acc, key) => ({ ...acc, [key]: true }), {}),
+  )
+
+  const [checkedSkillTypes, setCheckedSkillTypes] = useState(
+    Object.keys(MASkillType).reduce(
+      (acc, key) => ({ ...acc, [key]: true }),
+      {},
+    ),
+  )
+
+  const handleChangeCost = (event) => {
+    const { name, checked } = event.target
+    setCheckedCosts((prev) => ({
+      ...prev,
+      [name]: checked,
+    }))
+  }
+
+  const handleChangeGrade = (event) => {
+    const { name, checked } = event.target
+    setCheckedGrades((prev) => ({
+      ...prev,
+      [name]: checked,
+    }))
+  }
+
+  const handleChangeJobKind = (event) => {
+    const { name, checked } = event.target
+    setCheckedJobKinds((prev) => ({
+      ...prev,
+      [name]: checked,
+    }))
+  }
+
+  const handleChangeSkillType = (event) => {
+    const { name, checked } = event.target
+    setCheckedSkillTypes((prev) => ({
+      ...prev,
+      [name]: checked,
+    }))
+  }
+
   return (
     <div>
       <div className={'todo-w-[1300px] m-auto'}>
@@ -14,7 +69,7 @@ export default function Home() {
             <div className={'flex justify-start'}>
               <div className={'w-[100px] flex justify-start'}>스킬 유형</div>
               <div className={'flex items-center gap-[4px]'}>
-                {'물/마/지/수/약/치'.split('/').map((grade) => {
+                {Object.keys(MASkillType).map((key) => {
                   return (
                     <label
                       className="flex items-center cursor-pointer select-none px-[4px]"
@@ -23,8 +78,11 @@ export default function Home() {
                       <input
                         type="checkbox"
                         className="flex border-2 rounded-md border-blue-200"
+                        name={key}
+                        checked={checkedSkillTypes[key]}
+                        onChange={handleChangeSkillType}
                       />
-                      <div>{grade}</div>
+                      <div>{key}</div>
                     </label>
                   )
                 })}
@@ -33,7 +91,7 @@ export default function Home() {
             <div className={'flex justify-start'}>
               <div className={'w-[100px] flex justify-start'}>직업 유형</div>
               <div className={'flex items-center gap-[4px]'}>
-                {'수호/강습/지원'.split('/').map((grade) => {
+                {Object.keys(MAJobKind).map((key) => {
                   return (
                     <label
                       className="flex items-center cursor-pointer select-none px-[4px]"
@@ -42,8 +100,11 @@ export default function Home() {
                       <input
                         type="checkbox"
                         className="flex border-2 rounded-md border-blue-200"
+                        name={key}
+                        checked={checkedJobKinds[key]}
+                        onChange={handleChangeJobKind}
                       />
-                      <div>{grade}</div>
+                      <div>{key}</div>
                     </label>
                   )
                 })}
@@ -52,7 +113,7 @@ export default function Home() {
             <div className={'flex justify-start'}>
               <div className={'w-[100px] flex justify-start'}>등급</div>
               <div className={'flex items-center gap-[4px]'}>
-                {'N/R/SR/UR/MR'.split('/').map((grade) => {
+                {Object.keys(MAGrade).map((grade) => {
                   return (
                     <label
                       className="flex items-center cursor-pointer select-none px-[4px]"
@@ -61,6 +122,9 @@ export default function Home() {
                       <input
                         type="checkbox"
                         className="flex border-2 rounded-md border-blue-200"
+                        name={grade}
+                        checked={checkedGrades[grade]}
+                        onChange={handleChangeGrade}
                       />
                       <div>{grade}</div>
                     </label>
@@ -70,58 +134,27 @@ export default function Home() {
             </div>
             <div className={'flex justify-start'}>
               <div className={'w-[100px] flex justify-start'}>코스트</div>
-              <div className={'select-none'}>
-                <div className={'flex items-center gap-[4px]'}>
-                  <label className="flex items-center cursor-pointer select-none px-[4px]">
-                    <input
-                      type="checkbox"
-                      // checked={dropItem.isTopRankReward}
-                      className="flex border-2 rounded-md border-blue-200"
-                      // onChange={(e) => {
-                      //   const newDropTable = { ...dropTable }
-                      //   newDropTable.items[index as number].isTopRankReward =
-                      //     e.target.checked
-                      //   setDropTable(newDropTable)
-                      // }}
-                    />
-                    <div>1</div>
-                  </label>
-
-                  <label className="flex items-center cursor-pointer select-none px-[4px]">
-                    <input
-                      type="checkbox"
-                      className="flex border-2 rounded-md border-blue-200"
-                    />
-                    <div>2</div>
-                  </label>
-
-                  <label className="flex items-center cursor-pointer select-none px-[4px]">
-                    <input
-                      type="checkbox"
-                      className="flex border-2 rounded-md border-blue-200"
-                    />
-                    <div>3</div>
-                  </label>
-
-                  <label className="flex items-center cursor-pointer select-none px-[4px]">
-                    <input
-                      type="checkbox"
-                      className="flex border-2 rounded-md border-blue-200"
-                    />
-                    <div>4</div>
-                  </label>
-
-                  <label className="flex items-center cursor-pointer select-none px-[4px]">
-                    <input
-                      type="checkbox"
-                      className="flex border-2 rounded-md border-blue-200"
-                    />
-                    <div>5</div>
-                  </label>
-                </div>
+              <div className={'select-none flex items-center gap-[4px]'}>
+                {costs.map((key: any) => {
+                  return (
+                    <label
+                      key={createKey()}
+                      className="flex items-center cursor-pointer select-none px-[4px]"
+                    >
+                      <input
+                        type="checkbox"
+                        className="flex border-2 rounded-md border-blue-200"
+                        name={key}
+                        checked={checkedCosts[key + '']}
+                        onChange={handleChangeCost}
+                      />
+                      <div>{key}</div>
+                    </label>
+                  )
+                })}
               </div>
             </div>
-            <div className={'flex justify-start'}>
+            <div className={'flex justify-start bg-gray-500 opacity-20'}>
               <div className={'w-[100px] flex justify-start'}>원소 속성</div>
               <div className={'flex items-center gap-[4px]'}>
                 {'불/얼음/바람/빛/어둠'.split('/').map((grade) => {
@@ -140,7 +173,7 @@ export default function Home() {
                 })}
               </div>
             </div>
-            <div className={'flex justify-start'}>
+            <div className={'flex justify-start bg-gray-500 opacity-20'}>
               <div className={'w-[100px] flex justify-start'}>스킬 효과</div>
               <div className={'flex items-center gap-[4px]'}>
                 {'도발/기절/카드 드로우/정화/제거/도발 무시/보호막/봉인/회피/성검/코스트'
@@ -162,25 +195,75 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <MACardList />
+          <hr className={'my-[10px] border-gray-800'} />
+          <MACardList
+            checkedCosts={checkedCosts}
+            checkedGrades={checkedGrades}
+            checkedJobKinds={checkedJobKinds}
+            checkedSkillTypes={checkedSkillTypes}
+          />
         </div>
       </div>
     </div>
   )
 }
 
-function MACardList({}: any) {
-  return (
-    <div
-      className={
-        'flex flex-wrap gap-[4px] justify-center bg-white border-gray-300 border-x border-y rounded-md pt-[12px]'
-      }
-    >
-      {new Array(92).fill(1).map((key, index) => {
+function MACardList({
+  checkedCosts,
+  checkedGrades,
+  checkedJobKinds,
+  checkedSkillTypes,
+}: any) {
+  const TOTAL_CARDS_COUNT = 92
+  const [cards, setCards] = useState([])
+
+  useEffect(() => {
+    setCards(
+      new Array(TOTAL_CARDS_COUNT).fill(1).map((key, index) => {
         const number = index + 1
-        // eslint-disable-next-line react/jsx-key
-        return <MACardBox number={number} />
-      })}
+        const card = MACardDict[number]
+
+        const validCosts: string[] = _.keys(_.pickBy(checkedCosts, Boolean))
+        const isValidCost = validCosts.includes(card.cost + '')
+
+        const validGrades: string[] = _.keys(_.pickBy(checkedGrades, Boolean))
+        const isValidGrade = validGrades.includes(card.grade)
+
+        const validJobKinds: string[] = _.keys(
+          _.pickBy(checkedJobKinds, Boolean),
+        )
+        const isValidJobKind = validJobKinds.includes(card.jobKind + '')
+
+        const validSkillTypes: string[] = _.keys(
+          _.pickBy(checkedSkillTypes, Boolean),
+        )
+        const isValidSkillType = validSkillTypes.includes(card.skillType)
+
+        return isValidCost && isValidGrade && isValidJobKind && isValidSkillType
+      }),
+    )
+  }, [checkedCosts, checkedGrades, checkedJobKinds, checkedSkillTypes])
+
+  return (
+    <div className={'flex flex-col items-start'}>
+      <div
+        className={
+          'bg-white border-gray-400 border flex px-[10px] rounded font-bold'
+        }
+      >
+        {cards.filter((data) => !!data).length}/{TOTAL_CARDS_COUNT}
+      </div>
+      <div
+        className={
+          'flex flex-wrap gap-[4px] justify-center bg-white border-gray-300 border-x border-y rounded-md py-[12px]'
+        }
+      >
+        {cards.map((key, index) => {
+          if (key === true)
+            return <MACardBox number={index + 1} key={createKey()} />
+          else return <></>
+        })}
+      </div>
     </div>
   )
 }
@@ -192,8 +275,8 @@ function MACardBox({ number }: any) {
       className={'inline-block bg-gray-300 rounded p-[4px] shadow-md'}
     >
       <img className="w-[100px]" src={`/img/cards/${number}.png`} />
-      <div className={'text-[14px] font-medium w-[100px]'}>
-        {MACardNumber[number]}
+      <div className={'text-[14px] font-medium w-[100px] truncate'}>
+        {MACardDict[number].name}
       </div>
     </div>
   )
