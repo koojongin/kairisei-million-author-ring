@@ -2,6 +2,13 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
+import { Noto_Sans_KR } from 'next/font/google' // Roboto와 한글 NotoSans를 사용합니다.
+
+const notoSansKr = Noto_Sans_KR({
+  // preload: true, 기본값
+  subsets: ['latin'], // 또는 preload: false
+  weight: ['100', '400', '700', '900'], // 가변 폰트가 아닌 경우, 사용할 fontWeight 배열
+})
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -19,6 +26,10 @@ export const metadata: Metadata = {
   description: '밀리언 아서 : 링',
 }
 
+export const cls = (...classnames: string[]) => {
+  return classnames.join(' ')
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,7 +40,7 @@ export default function RootLayout({
       <head>
         <link href="./globals.css" rel="stylesheet" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={cls(notoSansKr.className)}>
         <Analytics />
         <div
           className={
