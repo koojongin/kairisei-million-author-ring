@@ -13,6 +13,12 @@ export default function MainSideBar() {
       <div className={'hover:underline'} onClick={() => router.push('/card')}>
         카드 목록
       </div>
+      <div
+        className={'hover:underline'}
+        onClick={() => router.push('/alliance-operation')}
+      >
+        연합 작전
+      </div>
       <div className={'hover:underline'} onClick={() => router.push('/gatcha')}>
         가챠 시뮬
       </div>

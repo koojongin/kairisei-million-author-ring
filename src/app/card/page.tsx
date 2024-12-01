@@ -8,6 +8,11 @@ type CheckBoxGroup = {
   [key: string]: boolean
 }
 
+enum CardImageSize {
+  LARGE = 'L',
+  SMALL = 'S',
+}
+
 const TOTAL_CARDS_COUNT = 97
 
 export default function Home() {
@@ -17,7 +22,10 @@ export default function Home() {
   )
 
   const [checkedGrades, setCheckedGrades] = useState<CheckBoxGroup>(
-    Object.keys(MAGrade).reduce((acc, key) => ({ ...acc, [key]: true }), {}),
+    Object.keys(MAGrade).reduce(
+      (acc, key) => ({ ...acc, [key]: key === MAGrade.MR }),
+      {},
+    ),
   )
 
   const [checkedJobKinds, setCheckedJobKinds] = useState<CheckBoxGroup>(
@@ -64,10 +72,9 @@ export default function Home() {
   }
 
   return (
-    <>
-      <div className={'relative text-[40px] font-bold my-[10px]'}>
-        카드 목록
-        <div>정렬 및 필터기능은 시간날때 업뎃할게여..</div>
+    <div className={'mt-[15px]'}>
+      <div className="text-[14px] text-red-400 font-medium flex justify-start">
+        * 완성된 데이터가 아닙니다. 틀리거나 빠진 부분이 있다면 제보부탁드립니다
       </div>
       <div className={'flex flex-col items-start justify-start'}>
         <div className={'flex justify-start'}>
@@ -206,7 +213,7 @@ export default function Home() {
         checkedJobKinds={checkedJobKinds}
         checkedSkillTypes={checkedSkillTypes}
       />
-    </>
+    </div>
   )
 }
 
@@ -217,6 +224,7 @@ function MACardList({
   checkedSkillTypes,
 }: any) {
   const [cards, setCards] = useState<any>([])
+  const [cardSize, setCardSize] = useState<CardImageSize>(CardImageSize.LARGE)
 
   useEffect(() => {
     setCards(
@@ -247,21 +255,40 @@ function MACardList({
 
   return (
     <div className={'flex flex-col items-start pb-[50px]'}>
-      <div
-        className={
-          'bg-white border-gray-400 border flex px-[15px] rounded-sm font-bold mb-[4px]'
-        }
-      >
-        {cards.filter((data: any) => !!data).length}/{TOTAL_CARDS_COUNT}
+      <div className={'flex items-center justify-start gap-[10px] mb-[4px]'}>
+        <div
+          className={
+            'bg-white border-gray-200 border flex px-[15px] rounded-sm font-bold'
+          }
+        >
+          카드수 : {cards.filter((data: any) => !!data).length}/
+          {TOTAL_CARDS_COUNT}
+        </div>
+        <div className={'flex items-center justify-center'}>
+          <div
+            className="bg-white border-gray-200 border flex px-[15px] rounded-sm font-bold cursor-pointer"
+            onClick={() => setCardSize(CardImageSize.LARGE)}
+          >
+            크게
+          </div>
+          <div
+            className="bg-white border-gray-200 border flex px-[15px] rounded-sm font-bold cursor-pointer"
+            onClick={() => setCardSize(CardImageSize.SMALL)}
+          >
+            작게
+          </div>
+        </div>
       </div>
       <div
         className={
-          'flex flex-wrap gap-[4px] justify-center bg-white border-gray-300 border-x border-y rounded-md py-[2px]'
+          'flex flex-wrap gap-[4px] justify-center bg-white/70 border-gray-300 border-x border-y rounded-md py-[2px] shadow'
         }
       >
         {cards.map((key: any, index: number) => {
           if (key === true)
-            return <MACardBox number={index + 1} key={createKey()} />
+            return (
+              <MACardBox number={index + 1} size={cardSize} key={createKey()} />
+            )
           else return <></>
         })}
       </div>
@@ -269,13 +296,18 @@ function MACardList({
   )
 }
 
-function MACardBox({ number }: any) {
+function MACardBox({ number, size = CardImageSize.LARGE }: any) {
+  const LARGE_IMG_PATH = '/cards'
+  const SMALL_IMG_PATH = '/cards-mini'
   return (
     <div
       key={createKey()}
       className={'inline-block bg-gray-300 rounded p-[4px] shadow-md'}
     >
-      <img className="w-[100px]" src={`/img/cards/${number}.png`} />
+      <img
+        className="w-[100px]"
+        src={`/img${size === CardImageSize.LARGE ? LARGE_IMG_PATH : SMALL_IMG_PATH}/${number}.png`}
+      />
       <div className={'text-[14px] font-medium w-[100px] truncate'}>
         {MACardDict[number].name}
       </div>
