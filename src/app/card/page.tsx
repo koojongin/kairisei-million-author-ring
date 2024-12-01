@@ -29,6 +29,13 @@ export default function Home() {
     costs.reduce((acc, costNumber) => ({ ...acc, [costNumber]: true }), {}),
   )
 
+  const [checkedElementTypes, setCheckedElementTypes] = useState<CheckBoxGroup>(
+    Object.keys(MAElementType).reduce(
+      (acc, key) => ({ ...acc, [key]: true }),
+      {},
+    ),
+  )
+
   const [checkedGrades, setCheckedGrades] = useState<CheckBoxGroup>(
     Object.keys(MAGrade).reduce(
       (acc, key) => ({ ...acc, [key]: key === MAGrade.MR }),
@@ -74,6 +81,14 @@ export default function Home() {
   const handleChangeSkillType = (event: any) => {
     const { name, checked } = event.target
     setCheckedSkillTypes((prev) => ({
+      ...prev,
+      [name]: checked,
+    }))
+  }
+
+  const handleChangeElementType = (event: any) => {
+    const { name, checked } = event.target
+    setCheckedElementTypes((prev) => ({
       ...prev,
       [name]: checked,
     }))
@@ -173,10 +188,10 @@ export default function Home() {
             })}
           </div>
         </div>
-        <div className={'flex justify-start bg-gray-500 opacity-20'}>
+        <div className={'flex justify-start'}>
           <div className={'w-[100px] flex justify-start'}>원소 속성</div>
           <div className={'flex items-center gap-[4px]'}>
-            {'불/얼음/바람/빛/어둠'.split('/').map((grade) => {
+            {Object.keys(MAElementType).map((key) => {
               return (
                 <label
                   className="flex items-center cursor-pointer select-none px-[4px]"
@@ -185,8 +200,11 @@ export default function Home() {
                   <input
                     type="checkbox"
                     className="flex border-2 rounded-md border-blue-200"
+                    name={key}
+                    checked={checkedElementTypes[key]}
+                    onChange={handleChangeElementType}
                   />
-                  <div>{grade}</div>
+                  <div>{key}</div>
                 </label>
               )
             })}
@@ -220,6 +238,7 @@ export default function Home() {
         checkedGrades={checkedGrades}
         checkedJobKinds={checkedJobKinds}
         checkedSkillTypes={checkedSkillTypes}
+        checkedElementTypes={checkedElementTypes}
       />
     </div>
   )
@@ -230,6 +249,7 @@ function MACardList({
   checkedGrades,
   checkedJobKinds,
   checkedSkillTypes,
+  checkedElementTypes,
 }: any) {
   const [cards, setCards] = useState<any>([])
   const [cardSize, setCardSize] = useState<CardImageSize>(CardImageSize.LARGE)
@@ -246,6 +266,11 @@ function MACardList({
         const validGrades: string[] = _.keys(_.pickBy(checkedGrades, Boolean))
         const isValidGrade = validGrades.includes(card.grade)
 
+        const validElementTypes: string[] = _.keys(
+          _.pickBy(checkedElementTypes, Boolean),
+        )
+        const isValidElementType = validElementTypes.includes(card.elementType)
+
         const validJobKinds: string[] = _.keys(
           _.pickBy(checkedJobKinds, Boolean),
         )
@@ -256,10 +281,22 @@ function MACardList({
         )
         const isValidSkillType = validSkillTypes.includes(card.skillType)
 
-        return isValidCost && isValidGrade && isValidJobKind && isValidSkillType
+        return (
+          isValidCost &&
+          isValidGrade &&
+          isValidJobKind &&
+          isValidSkillType &&
+          isValidElementType
+        )
       }),
     )
-  }, [checkedCosts, checkedGrades, checkedJobKinds, checkedSkillTypes])
+  }, [
+    checkedCosts,
+    checkedElementTypes,
+    checkedGrades,
+    checkedJobKinds,
+    checkedSkillTypes,
+  ])
 
   return (
     <div className={'flex flex-col items-start pb-[50px]'}>
@@ -289,7 +326,7 @@ function MACardList({
       </div>
       <div
         className={
-          'flex flex-wrap gap-[10px] justify-center bg-white/70 border-gray-300 border-x border-y rounded-md py-[10px] shadow'
+          'flex flex-wrap gap-[10px] justify-center bg-white/70 border-gray-300 border-x border-y rounded-md py-[10px] shadow w-full'
         }
       >
         {cards.map((key: any, index: number) => {
