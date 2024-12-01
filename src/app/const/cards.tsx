@@ -35,7 +35,8 @@ export interface MACard {
   skillType: MASkillType
   jobKind: MAJobKind
   grade: MAGrade
-  elementType?: MAElementType | any
+  elementType: MAElementType
+  star?: number
 }
 
 export const MACardDict: {
@@ -47,6 +48,8 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.지원,
     grade: MAGrade.MR,
+    elementType: MAElementType.빛,
+    star: 6,
   },
   2: {
     name: '원정형 파르살리아',
@@ -54,6 +57,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.강습,
     grade: MAGrade.MR,
+    elementType: MAElementType.어둠,
+    star: 5,
   },
   3: {
     name: '원정형 가희 아서',
@@ -61,6 +66,8 @@ export const MACardDict: {
     skillType: MASkillType.치,
     jobKind: MAJobKind.지원,
     grade: MAGrade.MR,
+    elementType: MAElementType.얼음,
+    star: 5,
   },
   4: {
     name: '원정형 파르살리아',
@@ -68,6 +75,8 @@ export const MACardDict: {
     skillType: MASkillType.치,
     jobKind: MAJobKind.지원,
     grade: MAGrade.MR,
+    elementType: MAElementType.바람,
+    star: 5,
   },
   5: {
     name: '원정형 부호 아서',
@@ -75,6 +84,8 @@ export const MACardDict: {
     skillType: MASkillType.수,
     jobKind: MAJobKind.수호,
     grade: MAGrade.MR,
+    elementType: MAElementType.바람,
+    star: 5,
   },
   6: {
     name: '원정형 페리도트',
@@ -82,6 +93,8 @@ export const MACardDict: {
     skillType: MASkillType.수,
     jobKind: MAJobKind.수호,
     grade: MAGrade.MR,
+    elementType: MAElementType.바람,
+    star: 5,
   },
   7: {
     name: '원정형 파르살리아',
@@ -89,6 +102,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.MR,
+    elementType: MAElementType.빛,
+    star: 5,
   },
   8: {
     name: '원정형 도적 아서',
@@ -96,6 +111,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.강습,
     grade: MAGrade.MR,
+    elementType: MAElementType.바람,
+    star: 5,
   },
   9: {
     name: '원정형 용병 아서',
@@ -103,6 +120,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.강습,
     grade: MAGrade.MR,
+    elementType: MAElementType.불,
+    star: 5,
   },
 
   10: {
@@ -111,6 +130,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.강습,
     grade: MAGrade.MR,
+    elementType: MAElementType.불,
+    star: 5,
   },
   11: {
     name: '원정형 우아사하',
@@ -118,6 +139,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.강습,
     grade: MAGrade.MR,
+    elementType: MAElementType.얼음,
+    star: 5,
   },
   12: {
     name: '원정형 쿠 훌린',
@@ -125,6 +148,8 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.강습,
     grade: MAGrade.MR,
+    elementType: MAElementType.얼음,
+    star: 5,
   },
   13: {
     name: '복설형 단테',
@@ -132,6 +157,8 @@ export const MACardDict: {
     skillType: MASkillType.치,
     jobKind: MAJobKind.지원,
     grade: MAGrade.MR,
+    elementType: MAElementType.빛,
+    star: 5,
   },
   14: {
     name: '섬격형 오이페',
@@ -139,6 +166,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.강습,
     grade: MAGrade.MR,
+    elementType: MAElementType.바람,
+    star: 4,
   },
   15: {
     name: '작암형 폰 애쉬',
@@ -146,6 +175,8 @@ export const MACardDict: {
     skillType: MASkillType.약,
     jobKind: MAJobKind.강습,
     grade: MAGrade.MR,
+    elementType: MAElementType.어둠,
+    star: 4,
   },
   16: {
     name: '말설형 가희 아서',
@@ -153,6 +184,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.지원,
     grade: MAGrade.MR,
+    elementType: MAElementType.얼음,
+    star: 4,
   },
   17: {
     name: '원정형 우아사하',
@@ -160,6 +193,8 @@ export const MACardDict: {
     skillType: MASkillType.치,
     jobKind: MAJobKind.지원,
     grade: MAGrade.MR,
+    elementType: MAElementType.빛,
+    star: 5,
   },
   18: {
     name: '말설형 부호 아서',
@@ -167,6 +202,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.MR,
+    elementType: MAElementType.빛,
+    star: 4,
   },
   19: {
     name: '원정형 스카아하',
@@ -174,6 +211,8 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.수호,
     grade: MAGrade.MR,
+    elementType: MAElementType.불,
+    star: 4,
   },
 
   20: {
@@ -182,6 +221,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.MR,
+    elementType: MAElementType.빛,
+    star: 4,
   },
   21: {
     name: '말설형 도적 아서',
@@ -189,6 +230,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.강습,
     grade: MAGrade.MR,
+    elementType: MAElementType.어둠,
+    star: 4,
   },
   22: {
     name: '말설형 용병 아서',
@@ -196,6 +239,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.강습,
     grade: MAGrade.MR,
+    elementType: MAElementType.얼음,
+    star: 4,
   },
   23: {
     name: '재절형 요르문간드',
@@ -203,6 +248,8 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.강습,
     grade: MAGrade.MR,
+    elementType: MAElementType.얼음,
+    star: 4,
   },
   24: {
     name: '전주형 페델마',
@@ -210,6 +257,8 @@ export const MACardDict: {
     skillType: MASkillType.약,
     jobKind: MAJobKind.강습,
     grade: MAGrade.MR,
+    elementType: MAElementType.바람,
+    star: 4,
   },
   25: {
     name: '전주형 애니드',
@@ -217,6 +266,8 @@ export const MACardDict: {
     skillType: MASkillType.치,
     jobKind: MAJobKind.지원,
     grade: MAGrade.MR,
+    elementType: MAElementType.빛,
+    star: 4,
   },
   26: {
     name: '역경형 오이페',
@@ -224,6 +275,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.강습,
     grade: MAGrade.UR,
+    elementType: MAElementType.어둠,
+    star: 3,
   },
   27: {
     name: '파빙형 가희 아서',
@@ -231,6 +284,8 @@ export const MACardDict: {
     skillType: MASkillType.치,
     jobKind: MAJobKind.지원,
     grade: MAGrade.UR,
+    elementType: MAElementType.빛,
+    star: 3,
   },
   28: {
     name: '이상형 도모보이',
@@ -238,6 +293,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.지원,
     grade: MAGrade.UR,
+    elementType: MAElementType.얼음,
+    star: 3,
   },
   29: {
     name: '종말형 오프닐',
@@ -245,6 +302,8 @@ export const MACardDict: {
     skillType: MASkillType.약,
     jobKind: MAJobKind.지원,
     grade: MAGrade.MR,
+    elementType: MAElementType.어둠,
+    star: 4,
   },
 
   30: {
@@ -253,6 +312,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.지원,
     grade: MAGrade.MR,
+    elementType: MAElementType.어둠,
+    star: 4,
   },
   31: {
     name: '파빙형 부호 아서',
@@ -260,6 +321,8 @@ export const MACardDict: {
     skillType: MASkillType.수,
     jobKind: MAJobKind.수호,
     grade: MAGrade.UR,
+    elementType: MAElementType.빛,
+    star: 3,
   },
   32: {
     name: '호령형 메이브',
@@ -267,6 +330,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.UR,
+    elementType: MAElementType.불,
+    star: 3,
   },
   33: {
     name: '파빙형 도적 아서',
@@ -274,6 +339,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.강습,
     grade: MAGrade.UR,
+    elementType: MAElementType.어둠,
+    star: 3,
   },
   34: {
     name: '파빙형 용병 아서',
@@ -281,6 +348,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.강습,
     grade: MAGrade.UR,
+    elementType: MAElementType.불,
+    star: 3,
   },
   35: {
     name: '복설형 단테 수르트',
@@ -288,6 +357,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.강습,
     grade: MAGrade.UR,
+    elementType: MAElementType.불,
+    star: 3,
   },
   36: {
     name: '복설형 페리도트',
@@ -295,6 +366,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.강습,
     grade: MAGrade.UR,
+    elementType: MAElementType.어둠,
+    star: 3,
   },
   37: {
     name: '파습형 폰 애쉬',
@@ -302,6 +375,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.지원,
     grade: MAGrade.UR,
+    elementType: MAElementType.어둠,
+    star: 3,
   },
   38: {
     name: '말설형 쿠 훌린',
@@ -309,6 +384,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.지원,
     grade: MAGrade.UR,
+    elementType: MAElementType.빛,
+    star: 2,
   },
   39: {
     name: '파빙형 스카아하',
@@ -316,6 +393,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.지원,
     grade: MAGrade.UR,
+    elementType: MAElementType.어둠,
+    star: 2,
   },
 
   40: {
@@ -324,6 +403,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.SR,
+    elementType: MAElementType.불,
+    star: 3,
   },
   41: {
     name: '말설형 쿠 훌린',
@@ -331,6 +412,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.UR,
+    elementType: MAElementType.불,
+    star: 2,
   },
   42: {
     name: '원정형 카라틴',
@@ -338,6 +421,8 @@ export const MACardDict: {
     skillType: MASkillType.수,
     jobKind: MAJobKind.수호,
     grade: MAGrade.UR,
+    elementType: MAElementType.얼음,
+    star: 2,
   },
   43: {
     name: '파빙형 우아사하',
@@ -345,6 +430,8 @@ export const MACardDict: {
     skillType: MASkillType.수,
     jobKind: MAJobKind.수호,
     grade: MAGrade.UR,
+    elementType: MAElementType.얼음,
+    star: 2,
   },
   44: {
     name: '파빙형 스카아하',
@@ -352,6 +439,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.강습,
     grade: MAGrade.UR,
+    elementType: MAElementType.불,
+    star: 2,
   },
   45: {
     name: '원정형 카라틴',
@@ -359,6 +448,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.강습,
     grade: MAGrade.UR,
+    elementType: MAElementType.얼음,
+    star: 2,
   },
   46: {
     name: '역경형 엘렉',
@@ -366,6 +457,8 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.강습,
     grade: MAGrade.UR,
+    elementType: MAElementType.바람,
+    star: 2,
   },
   47: {
     name: '원정형 카라틴',
@@ -373,6 +466,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.지원,
     grade: MAGrade.UR,
+    elementType: MAElementType.얼음,
+    star: 2,
   },
   48: {
     name: '이상형 페델마',
@@ -380,6 +475,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.지원,
     grade: MAGrade.UR,
+    elementType: MAElementType.바람,
+    star: 2,
   },
   49: {
     name: '말설형 모르가즈',
@@ -387,6 +484,8 @@ export const MACardDict: {
     skillType: MASkillType.수,
     jobKind: MAJobKind.수호,
     grade: MAGrade.SR,
+    elementType: MAElementType.바람,
+    star: 3,
   },
 
   50: {
@@ -395,6 +494,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.강습,
     grade: MAGrade.SR,
+    elementType: MAElementType.어둠,
+    star: 3,
   },
   51: {
     name: '통어형 폰 애쉬',
@@ -402,6 +503,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.강습,
     grade: MAGrade.SR,
+    elementType: MAElementType.어둠,
+    star: 3,
   },
   52: {
     name: '기상형 도모보이',
@@ -409,6 +512,8 @@ export const MACardDict: {
     skillType: MASkillType.치,
     jobKind: MAJobKind.지원,
     grade: MAGrade.SR,
+    elementType: MAElementType.바람,
+    star: 3,
   },
   53: {
     name: '정념형 애니드',
@@ -416,6 +521,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.SR,
+    elementType: MAElementType.바람,
+    star: 3,
   },
   54: {
     name: '방주형 요르문간드',
@@ -423,6 +530,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.SR,
+    elementType: MAElementType.바람,
+    star: 3,
   },
   55: {
     name: '복설형 쿠 훌린',
@@ -430,6 +539,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.SR,
+    elementType: MAElementType.빛,
+    star: 3,
   },
   56: {
     name: '방어형 중앙 시스템',
@@ -437,6 +548,8 @@ export const MACardDict: {
     skillType: MASkillType.수,
     jobKind: MAJobKind.수호,
     grade: MAGrade.SR,
+    elementType: MAElementType.빛,
+    star: 3,
   },
   57: {
     name: '성장형 메이브',
@@ -444,6 +557,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.강습,
     grade: MAGrade.SR,
+    elementType: MAElementType.불,
+    star: 3,
   },
   58: {
     name: '휴게형 파르살리아',
@@ -451,6 +566,8 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.강습,
     grade: MAGrade.SR,
+    elementType: MAElementType.불,
+    star: 3,
   },
   59: {
     name: '황수형 오프닐',
@@ -458,6 +575,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.강습,
     grade: MAGrade.SR,
+    elementType: MAElementType.불,
+    star: 3,
   },
 
   60: {
@@ -466,6 +585,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.강습,
     grade: MAGrade.SR,
+    elementType: MAElementType.불,
+    star: 3,
   },
   61: {
     name: '정념형 엘렉',
@@ -473,6 +594,8 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.지원,
     grade: MAGrade.SR,
+    elementType: MAElementType.바람,
+    star: 3,
   },
   62: {
     name: '복설형 펜리르의 후예',
@@ -480,6 +603,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.강습,
     grade: MAGrade.SR,
+    elementType: MAElementType.바람,
+    star: 2,
   },
   63: {
     name: '이상형 니무에',
@@ -487,6 +612,8 @@ export const MACardDict: {
     skillType: MASkillType.치,
     jobKind: MAJobKind.지원,
     grade: MAGrade.SR,
+    elementType: MAElementType.얼음,
+    star: 2,
   },
   64: {
     name: '영호형 우아사하',
@@ -494,6 +621,8 @@ export const MACardDict: {
     skillType: MASkillType.수,
     jobKind: MAJobKind.지원,
     grade: MAGrade.SR,
+    elementType: MAElementType.바람,
+    star: 2,
   },
   65: {
     name: '복설형 엘레인',
@@ -501,6 +630,8 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.지원,
     grade: MAGrade.SR,
+    elementType: MAElementType.빛,
+    star: 3,
   },
   66: {
     name: '말설형 단테 수르트',
@@ -508,6 +639,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.지원,
     grade: MAGrade.SR,
+    elementType: MAElementType.빛,
+    star: 3,
   },
   67: {
     name: '기상형 페델마',
@@ -515,6 +648,8 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.지원,
     grade: MAGrade.SR,
+    elementType: MAElementType.어둠,
+    star: 3,
   },
   68: {
     name: '추적형 제국 이단 심문관',
@@ -522,6 +657,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.지원,
     grade: MAGrade.SR,
+    elementType: MAElementType.어둠,
+    star: 3,
   },
   69: {
     name: '정념형 엘렉',
@@ -529,6 +666,8 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.지원,
     grade: MAGrade.SR,
+    elementType: MAElementType.빛,
+    star: 2,
   },
 
   70: {
@@ -537,6 +676,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.SR,
+    elementType: MAElementType.빛,
+    star: 2,
   },
   71: {
     name: '원정형 엘렉',
@@ -544,6 +685,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.강습,
     grade: MAGrade.SR,
+    elementType: MAElementType.불,
+    star: 2,
   },
   72: {
     name: '원정형 니무에',
@@ -551,6 +694,8 @@ export const MACardDict: {
     skillType: MASkillType.약,
     jobKind: MAJobKind.강습,
     grade: MAGrade.SR,
+    elementType: MAElementType.바람,
+    star: 2,
   },
   73: {
     name: '원정형 오이페',
@@ -558,6 +703,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.SR,
+    elementType: MAElementType.불,
+    star: 1,
   },
   74: {
     name: '실심형 경비원',
@@ -565,6 +712,8 @@ export const MACardDict: {
     skillType: MASkillType.수,
     jobKind: MAJobKind.수호,
     grade: MAGrade.R,
+    elementType: MAElementType.빛,
+    star: 1,
   },
   75: {
     name: '단조형 거인',
@@ -572,6 +721,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.강습,
     grade: MAGrade.R,
+    elementType: MAElementType.불,
+    star: 1,
   },
   76: {
     name: '돌변형 북쪽 거대 늑대',
@@ -579,6 +730,8 @@ export const MACardDict: {
     skillType: MASkillType.약,
     jobKind: MAJobKind.강습,
     grade: MAGrade.R,
+    elementType: MAElementType.어둠,
+    star: 1,
   },
   77: {
     name: '서수형 메이브',
@@ -586,6 +739,8 @@ export const MACardDict: {
     skillType: MASkillType.수,
     jobKind: MAJobKind.수호,
     grade: MAGrade.SR,
+    elementType: MAElementType.불,
+    star: 1,
   },
   78: {
     name: '영호형 스카아하',
@@ -593,6 +748,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.SR,
+    elementType: MAElementType.빛,
+    star: 1,
   },
   79: {
     name: '원정형 애니드',
@@ -600,6 +757,8 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.강습,
     grade: MAGrade.SR,
+    elementType: MAElementType.불,
+    star: 1,
   },
 
   80: {
@@ -608,6 +767,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.강습,
     grade: MAGrade.SR,
+    elementType: MAElementType.얼음,
+    star: 1,
   },
   81: {
     name: '탁식형 엘레인',
@@ -615,6 +776,8 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.강습,
     grade: MAGrade.SR,
+    elementType: MAElementType.바람,
+    star: 1,
   },
   82: {
     name: '각력형 카라틴',
@@ -622,6 +785,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.강습,
     grade: MAGrade.SR,
+    elementType: MAElementType.바람,
+    star: 1,
   },
   83: {
     name: '복설형 모르가즈',
@@ -629,6 +794,8 @@ export const MACardDict: {
     skillType: MASkillType.치,
     jobKind: MAJobKind.지원,
     grade: MAGrade.SR,
+    elementType: MAElementType.빛,
+    star: 1,
   },
   84: {
     name: '중주형 거인',
@@ -636,6 +803,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.R,
+    elementType: MAElementType.얼음,
+    star: 1,
   },
   85: {
     name: '실심형 연구원',
@@ -643,6 +812,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.지원,
     grade: MAGrade.R,
+    elementType: MAElementType.얼음,
+    star: 1,
   },
   86: {
     name: '감관형 기생체',
@@ -650,6 +821,8 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.지원,
     grade: MAGrade.R,
+    elementType: MAElementType.바람,
+    star: 1,
   },
   87: {
     name: '파습형 제국 돌격병',
@@ -657,6 +830,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.N,
+    elementType: MAElementType.불,
+    star: 1,
   },
   88: {
     name: '파습형 제국 형벌병',
@@ -664,6 +839,8 @@ export const MACardDict: {
     skillType: MASkillType.물,
     jobKind: MAJobKind.수호,
     grade: MAGrade.N,
+    elementType: MAElementType.빛,
+    star: 1,
   },
   89: {
     name: '선봉형 브리틴 병사',
@@ -671,6 +848,8 @@ export const MACardDict: {
     skillType: MASkillType.마,
     jobKind: MAJobKind.강습,
     grade: MAGrade.N,
+    elementType: MAElementType.얼음,
+    star: 1,
   },
 
   90: {
@@ -679,6 +858,8 @@ export const MACardDict: {
     skillType: MASkillType.약,
     jobKind: MAJobKind.강습,
     grade: MAGrade.N,
+    elementType: MAElementType.바람,
+    star: 1,
   },
   91: {
     name: '지원형 브리튼 병사',
@@ -686,6 +867,8 @@ export const MACardDict: {
     skillType: MASkillType.치,
     jobKind: MAJobKind.지원,
     grade: MAGrade.N,
+    elementType: MAElementType.얼음,
+    star: 1,
   },
   92: {
     name: '파습형 제국 저격병',
@@ -693,6 +876,8 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.지원,
     grade: MAGrade.N,
+    elementType: MAElementType.어둠,
+    star: 1,
   },
   93: {
     name: '작암형 모르가즈',
@@ -701,6 +886,7 @@ export const MACardDict: {
     jobKind: MAJobKind.강습,
     grade: MAGrade.UR,
     elementType: MAElementType.어둠,
+    star: 2,
   },
   94: {
     name: '파괴형 잠수 부대',
@@ -709,6 +895,7 @@ export const MACardDict: {
     jobKind: MAJobKind.강습,
     grade: MAGrade.N,
     elementType: MAElementType.어둠,
+    star: 1,
   },
   95: {
     name: '이변형 뒤틀린 악몽',
@@ -717,6 +904,7 @@ export const MACardDict: {
     jobKind: MAJobKind.수호,
     grade: MAGrade.R,
     elementType: MAElementType.얼음,
+    star: 1,
   },
   96: {
     name: '파습형 제국 헌병',
@@ -725,6 +913,7 @@ export const MACardDict: {
     jobKind: MAJobKind.지원,
     grade: MAGrade.R,
     elementType: MAElementType.얼음,
+    star: 1,
   },
   97: {
     name: '배회형 공포의 혼령',
@@ -733,5 +922,6 @@ export const MACardDict: {
     jobKind: MAJobKind.지원,
     grade: MAGrade.R,
     elementType: MAElementType.어둠,
+    star: 1,
   },
 }

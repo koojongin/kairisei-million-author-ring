@@ -26,7 +26,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/projects/kairisei-million-author-ring/public/img/raid",
+    "last_opened_file_path": "C:/projects/kairisei-million-author-ring/public/img/etc",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -44,11 +44,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\kairisei-million-author-ring\public\img\etc" />
       <recent name="C:\projects\kairisei-million-author-ring\public\img\raid" />
       <recent name="C:\projects\kairisei-million-author-ring\public\img\cards-mini" />
       <recent name="C:\projects\kairisei-million-author-ring\src\app\alliance-operation" />
       <recent name="C:\projects\kairisei-million-author-ring\public\img\cards" />
-      <recent name="C:\projects\kairisei-million-author-ring\src\app\update-log" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projects\kairisei-million-author-ring\src\app\card" />
@@ -103,7 +103,7 @@
       <workItem from="1732665595031" duration="597000" />
       <workItem from="1732823088418" duration="20949000" />
       <workItem from="1732896005857" duration="8340000" />
-      <workItem from="1733028887799" duration="7133000" />
+      <workItem from="1733028887799" duration="12773000" />
     </task>
     <servers />
   </component>
