@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
-import { Noto_Sans_KR } from 'next/font/google' // Roboto와 한글 NotoSans를 사용합니다.
+import { Noto_Sans_KR } from 'next/font/google'
+import MainSideBar from '@/app/components/main-side-bar/main-side-bar' // Roboto와 한글 NotoSans를 사용합니다.
 
 const notoSansKr = Noto_Sans_KR({
   // preload: true, 기본값
@@ -40,15 +41,23 @@ export default function RootLayout({
       <head>
         <link href="./globals.css" rel="stylesheet" />
       </head>
-      <body className={cls(notoSansKr.className)}>
+      <body className={'relative ' + cls(notoSansKr.className)}>
         <Analytics />
         <div
           className={
-            'bg-center bg-cover min-w-full h-full absolute -z-10 opacity-10'
+            'bg-center bg-cover min-w-full h-full absolute -z-10 opacity-10 bg-repeat'
           }
           style={{ backgroundImage: `url('/img/bg-low.jpg')` }}
         ></div>
-        {children}
+        <div className={'w-[1100px] m-auto flex justify-start gap-[4px]'}>
+          <div className={'max-w-[200px] w-full min-h-lvh'}>
+            <MainSideBar />
+          </div>
+          <div className={'w-[900px] text-center'}>{children}</div>
+        </div>
+        <div className={'bg-white/50 flex justify-center p-[8px] text-[14px]'}>
+          2024년 11월 29일, 이 프로젝트가 시작되었습니다.
+        </div>
       </body>
     </html>
   )

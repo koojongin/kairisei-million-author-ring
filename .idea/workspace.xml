@@ -26,7 +26,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/projects/kairisei-million-author-ring/public/img",
+    "last_opened_file_path": "C:/projects/kairisei-million-author-ring/public/img/cards",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -37,20 +37,21 @@
     "npm.build.executor": "Run",
     "npm.dev.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "C:\\projects\\kairisei-million-author-ring\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "settings.editor.selected.configurable": "Errors",
     "ts.external.directory.path": "C:\\projects\\kairisei-million-author-ring\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\kairisei-million-author-ring\public\img\cards" />
+      <recent name="C:\projects\kairisei-million-author-ring\src\app\update-log" />
+      <recent name="C:\projects\kairisei-million-author-ring\src\app\gatcha" />
       <recent name="C:\projects\kairisei-million-author-ring\public\img" />
       <recent name="C:\projects\kairisei-million-author-ring" />
-      <recent name="C:\projects\kairisei-million-author-ring\public\img\items" />
-      <recent name="C:\projects\kairisei-million-author-ring\src\app\services" />
-      <recent name="C:\projects\kairisei-million-author-ring\public\img\cards" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\kairisei-million-author-ring\src\app\card" />
       <recent name="C:\projects\kairisei-million-author-ring\src\app" />
     </key>
   </component>
@@ -101,7 +102,8 @@
       <workItem from="1732665545551" duration="24000" />
       <workItem from="1732665595031" duration="597000" />
       <workItem from="1732823088418" duration="20949000" />
-      <workItem from="1732896005857" duration="7766000" />
+      <workItem from="1732896005857" duration="8340000" />
+      <workItem from="1733028887799" duration="5360000" />
     </task>
     <servers />
   </component>

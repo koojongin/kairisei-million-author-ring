@@ -21,12 +21,21 @@ export enum MAGrade {
   'N' = 'N',
 }
 
+export enum MAElementType {
+  '어둠' = '어둠',
+  '불' = '불',
+  '얼음' = '얼음',
+  '바람' = '바람',
+  '빛' = '빛',
+}
+
 export interface MACard {
   name: string
   cost: number
   skillType: MASkillType
   jobKind: MAJobKind
   grade: MAGrade
+  elementType?: MAElementType | any
 }
 
 export const MACardDict: {
@@ -684,5 +693,45 @@ export const MACardDict: {
     skillType: MASkillType.지,
     jobKind: MAJobKind.지원,
     grade: MAGrade.N,
+  },
+  93: {
+    name: '작암형 모르가즈',
+    cost: 4,
+    skillType: MASkillType.마,
+    jobKind: MAJobKind.강습,
+    grade: MAGrade.UR,
+    elementType: MAElementType.어둠,
+  },
+  94: {
+    name: '파괴형 잠수 부대',
+    cost: 2,
+    skillType: MASkillType.지,
+    jobKind: MAJobKind.강습,
+    grade: MAGrade.N,
+    elementType: MAElementType.어둠,
+  },
+  95: {
+    name: '이변형 뒤틀린 악몽',
+    cost: 3,
+    skillType: MASkillType.수,
+    jobKind: MAJobKind.수호,
+    grade: MAGrade.R,
+    elementType: MAElementType.얼음,
+  },
+  96: {
+    name: '파습형 제국 헌병',
+    cost: 3,
+    skillType: MASkillType.치,
+    jobKind: MAJobKind.지원,
+    grade: MAGrade.R,
+    elementType: MAElementType.얼음,
+  },
+  97: {
+    name: '배회형 공포의 혼령',
+    cost: 2,
+    skillType: MASkillType.약,
+    jobKind: MAJobKind.지원,
+    grade: MAGrade.R,
+    elementType: MAElementType.어둠,
   },
 }
