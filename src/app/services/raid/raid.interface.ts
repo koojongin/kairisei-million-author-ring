@@ -13,6 +13,7 @@ export interface MARaidLevel {
 export interface MARaidPart {
   name: string
   skills: MARaidPartSkill[]
+  element?: string
   level?: number
   life?: number
   damageOfPhysical?: number

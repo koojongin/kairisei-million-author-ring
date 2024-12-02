@@ -52,8 +52,8 @@ export default function AllianceOperationPage() {
                 return (
                   <div
                     key={createKey()}
-                    className={`bg-white border border-gray-600 px-[10px] cursor-pointer
-                    ${selectedLevel?.name === level.name ? 'bg-green-400 text-white border-green-400' : ''}`}
+                    className={`border border-gray-600 px-[10px] cursor-pointer
+                    ${selectedLevel?.name === level.name ? 'bg-green-500 text-white border-green-500' : 'bg-white'}`}
                     onClick={() => setSelectedLevel(level)}
                   >
                     {level.name}
@@ -99,17 +99,32 @@ export default function AllianceOperationPage() {
                 <div className={'text-start py-[10px]'}>
                   {selectedLevel.desc}
                 </div>
-                <div className={'text-start'}>
-                  {selectedLevel.parts.map((part) => {
+                <div className={'text-start flex border border-gray-800'}>
+                  {selectedLevel.parts.map((part, pIndex) => {
                     return (
-                      <div key={createKey()} className={'mb-[10px]'}>
-                        <div
-                          className={
-                            'border border-gray-800 border-b-0 inline-block px-[10px]'
-                          }
-                        >
-                          <div>{part.name}</div>
-                          <div className={'text-[14px]'}>
+                      <div
+                        key={createKey()}
+                        className={`flex-1 border-gray-800 ${pIndex && 'border-l'}`}
+                      >
+                        <div className={'inline-block w-full'}>
+                          <div
+                            className={
+                              'text-[20px] flex items-center gap-[4px] justify-center w-full bg-gray-400 text-white font-bold'
+                            }
+                          >
+                            {part.element && (
+                              <img
+                                className={'w-[24px]'}
+                                src={`/img/etc/${part.element}-type.png`}
+                              />
+                            )}
+                            {part.name}
+                          </div>
+                          <div
+                            className={
+                              'text-[14px] border-y border-dashed border-gray-800 px-[10px]'
+                            }
+                          >
                             <div>레벨: {part.level}</div>
                             <div>체력: {part.life?.toLocaleString()}</div>
                             <div>물리 공격력: {part.damageOfPhysical}</div>
@@ -119,7 +134,7 @@ export default function AllianceOperationPage() {
                             <div>마법 방어력: {part.armorOfSpell}</div>
                           </div>
                         </div>
-                        <div className={'border border-gray-800 p-[10px]'}>
+                        <div className={'p-[10px]'}>
                           {part.skills.map((skill, index) => {
                             return (
                               <div

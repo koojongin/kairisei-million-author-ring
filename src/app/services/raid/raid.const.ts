@@ -10,6 +10,7 @@ export const OFFNIL: MARaid = {
       parts: [
         {
           name: '오른쪽 발',
+          element: 'fire',
           level: 65,
           life: 63036,
           damageOfPhysical: 3673,
@@ -30,6 +31,7 @@ export const OFFNIL: MARaid = {
         },
         {
           name: '오프닐',
+          element: 'fire',
           level: 65,
           life: 238758,
           damageOfPhysical: 74,
@@ -54,6 +56,7 @@ export const OFFNIL: MARaid = {
         },
         {
           name: '왼쪽 발',
+          element: 'fire',
           level: 65,
           life: 68598,
           damageOfPhysical: 68,
@@ -81,6 +84,7 @@ export const OFFNIL: MARaid = {
       parts: [
         {
           name: '오른쪽 발',
+          element: 'fire',
           level: 65,
           life: 63036,
           damageOfPhysical: 3673,
@@ -101,6 +105,7 @@ export const OFFNIL: MARaid = {
         },
         {
           name: '오프닐',
+          element: 'fire',
           level: 65,
           life: 238758,
           damageOfPhysical: 74,
@@ -129,6 +134,7 @@ export const OFFNIL: MARaid = {
         },
         {
           name: '왼쪽 발',
+          element: 'fire',
           level: 65,
           life: 68598,
           damageOfPhysical: 68,

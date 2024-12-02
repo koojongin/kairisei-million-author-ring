@@ -7,6 +7,15 @@ export default function UpdateLogPage() {
         }
       >
         <div>
+          <div className={'font-bold'}>2024-12-02 14:42:03</div>
+          <div className={'flex flex-col items-start'}>
+            <div>카드 목록 이미지 작게 보기 기능 추가</div>
+            <div>빠져있던 카드 4개 추가(더 있을 수 있음)</div>
+            <div>사이드 메뉴 추가</div>
+          </div>
+        </div>
+
+        <div>
           <div className={'font-bold'}>2024-12-01 16:05:03</div>
           <div className={'flex flex-col items-start'}>
             <div>카드 목록 이미지 작게 보기 기능 추가</div>
