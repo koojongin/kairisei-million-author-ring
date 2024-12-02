@@ -18,7 +18,7 @@ type CheckBoxGroup = {
   [key: string]: boolean
 }
 
-const TOTAL_CARDS_COUNT = 97
+const TOTAL_CARDS_COUNT = 107
 
 export default function Home() {
   const costs = [5, 4, 3, 2, 1]
