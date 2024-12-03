@@ -351,6 +351,16 @@ export const JORMUNGANDR: MARaid = {
               armorOfPhysical: 312,
               armorOfSpell: 312,
             },
+            상급: {
+              element: MAElementType.바람,
+              level: 25,
+              life: 85230,
+              damageOfPhysical: 210,
+              damageOfSpell: 210,
+              regeneration: 210,
+              armorOfPhysical: 473,
+              armorOfSpell: 473,
+            },
           },
           skills: [
             {

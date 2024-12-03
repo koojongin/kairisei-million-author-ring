@@ -66,11 +66,10 @@ export function MACardList({
         </div>
       </div>
       <div className="flex flex-wrap gap-[10px] justify-center bg-white/70 border-gray-300 border-x border-y rounded-md py-[10px] shadow w-full">
-        {cards
-          .filter((key) => !!key)
-          .map((key, index: number) => {
-            return <MACardBox number={index + 1} size={cardSize} key={createKey()} />
-          })}
+        {cards.map((key, index: number) => {
+          if (!key) return
+          return <MACardBox number={index + 1} size={cardSize} key={createKey()} />
+        })}
       </div>
     </div>
   )

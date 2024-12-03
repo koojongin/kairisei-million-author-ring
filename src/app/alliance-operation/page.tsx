@@ -121,8 +121,8 @@ export default function AllianceOperationPage() {
                         <div className="inline-block w-full">
                           {part.attributes && (
                             <div>
-                              <div className="text-[20px] flex items-center gap-[4px] justify-center w-full bg-gray-400 text-white font-bold">
-                                {attribute && (
+                              <div className="h-[38px] text-[20px] flex items-center gap-[4px] justify-center w-full bg-gray-400 text-white font-bold">
+                                {attribute?.element && (
                                   <img
                                     className="w-[24px]"
                                     src={`/img/etc/${getElementTypeEn(attribute.element)}-type.png`}

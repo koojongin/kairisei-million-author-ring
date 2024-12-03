@@ -65,7 +65,7 @@ export default function GatchaSimulatorPage() {
           <div className="flex flex-col items-start gap-[10px]">
             <div className="flex gap-[10px] items-center">
               <div
-                className="select-none cursor-pointer bg-gray-800 text-white px-[10px] py-[4px] rounded-xl shadow-md shadow-gray-800 border-white border"
+                className="select-none cursor-pointer bg-gray-800 text-white px-[10px] py-[4px] rounded-full shadow-md shadow-gray-800 border-white border-2"
                 onClick={() => roleCards()}
               >
                 공명 10회
@@ -74,9 +74,15 @@ export default function GatchaSimulatorPage() {
                 <div>{roledCount.toLocaleString()}회 공명됨</div>
                 <div className="flex gap-[4px] [&>div]:border [&>div]:border-gray-800 [&>div]:px-[4px] [&>div]:rounded">
                   <div>
-                    【MR】
+                    【MR5성】
                     {accumulatedCards
-                      .filter((card: any) => card.grade === MAGrade.MR)
+                      .filter((card: any) => card.grade === MAGrade.MR && card.star === 5)
+                      .length.toLocaleString()}
+                  </div>
+                  <div>
+                    【MR4성】
+                    {accumulatedCards
+                      .filter((card: any) => card.grade === MAGrade.MR && card.star === 4)
                       .length.toLocaleString()}
                   </div>
                   <div>
@@ -120,9 +126,49 @@ export default function GatchaSimulatorPage() {
                     })}
                   </div>
                   <hr className="my-[10px]" />
-                  <div>
-                    현재까지 뽑기로 누적된 카드 목록(
-                    {accumulatedCards.length.toLocaleString()})
+                  <div className="mb-[10px]">
+                    <div>
+                      현재까지 뽑기로 누적된 카드 목록(
+                      {accumulatedCards.length.toLocaleString()})
+                    </div>
+                    <div className="flex gap-[4px] [&>div]:border [&>div]:border-gray-800 [&>div]:px-[4px] [&>div]:rounded">
+                      <div>
+                        【MR5성】
+                        {accumulatedCards
+                          .filter((card: any) => card.grade === MAGrade.MR && card.star === 5)
+                          .length.toLocaleString()}
+                      </div>
+                      <div>
+                        【MR4성】
+                        {accumulatedCards
+                          .filter((card: any) => card.grade === MAGrade.MR && card.star === 4)
+                          .length.toLocaleString()}
+                      </div>
+                      <div>
+                        【UR】
+                        {accumulatedCards
+                          .filter((card: any) => card.grade === MAGrade.UR)
+                          .length.toLocaleString()}
+                      </div>
+                      <div>
+                        【SR】
+                        {accumulatedCards
+                          .filter((card: any) => card.grade === MAGrade.SR)
+                          .length.toLocaleString()}
+                      </div>
+                      <div>
+                        【R】
+                        {accumulatedCards
+                          .filter((card: any) => card.grade === MAGrade.R)
+                          .length.toLocaleString()}
+                      </div>
+                      <div>
+                        【N】
+                        {accumulatedCards
+                          .filter((card: any) => card.grade === MAGrade.N)
+                          .length.toLocaleString()}
+                      </div>
+                    </div>
                   </div>
                   <div className="flex flex-wrap gap-[4px]">
                     {accumulatedCards.map((card: any) => {
