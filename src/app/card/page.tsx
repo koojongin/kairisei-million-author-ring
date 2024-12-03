@@ -62,7 +62,7 @@ export default function Home() {
       [name]: checked,
     }))
   }
-
+  //
   const handleChangeElementType = (event: any) => {
     const { name, checked } = event.target
     setCheckedElementTypes((prev) => ({
