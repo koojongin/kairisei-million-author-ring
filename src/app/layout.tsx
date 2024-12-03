@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
-import { Nanum_Gothic_Coding } from 'next/font/google'
-import MainSideBar from '@/app/components/main-side-bar/main-side-bar' // Roboto와 한글 NotoSans를 사용합니다.
+import { Nanum_Gothic } from 'next/font/google'
+import React from 'react' // Roboto와 한글 NotoSans를 사용합니다.
+import MainSideBar from '@/app/components/main-side-bar/main-side-bar'
+import MainHeaderBar from '@/app/components/main-side-bar/main-header-bar'
 
-const notoSansKr = Nanum_Gothic_Coding({
-  // preload: true, 기본값
+const notoSansKr = Nanum_Gothic({
   subsets: ['latin'], // 또는 preload: false
-  // weight: ['100', '400', '700', '900'], // 가변 폰트가 아닌 경우, 사용할 fontWeight 배열
-  weight: ['400', '700'], // 가변 폰트가 아닌 경우, 사용할 fontWeight 배열
+  weight: ['400', '700', '800'], // 가변 폰트가 아닌 경우, 사용할 fontWeight 배열
 })
 
 const geistSans = localFont({
@@ -42,21 +42,26 @@ export default function RootLayout({
       <head>
         <link href="./globals.css" rel="stylesheet" />
       </head>
-      <body className={'relative ' + cls(notoSansKr.className)}>
+      <body className={`relative ${cls(notoSansKr.className)}`}>
         <Analytics />
         <div
-          className={
-            'bg-center bg-cover min-w-full h-full absolute -z-10 opacity-10 bg-repeat'
-          }
+          className="bg-center bg-cover min-w-full h-full absolute -z-10 opacity-10 bg-repeat"
           style={{ backgroundImage: `url('/img/bg-low.jpg')` }}
-        ></div>
-        <div className={'w-[1100px] m-auto flex justify-start gap-[4px]'}>
-          <div className={'max-w-[200px] w-full min-h-lvh'}>
-            <MainSideBar />
+        />
+        <div className="flex flex-col w-full">
+          <div className="w-full bg-[#3d414d]">
+            <div className="w-[960px] m-auto py-[10px]">
+              <MainHeaderBar />
+            </div>
           </div>
-          <div className={'w-[900px] text-center'}>{children}</div>
+          <div className="w-full">
+            <div className="w-[960px] m-auto">
+              <MainSideBar />
+            </div>
+          </div>
+          <div className="w-[960px] min-h-[700px] m-auto">{children}</div>
         </div>
-        <div className={'bg-white/50 flex justify-center p-[8px] text-[14px]'}>
+        <div className="bg-white/50 flex justify-center p-[8px] text-[14px]">
           2024년 11월 29일, 이 프로젝트가 시작되었습니다.
         </div>
       </body>

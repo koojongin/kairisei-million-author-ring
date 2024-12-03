@@ -26,12 +26,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/projects/kairisei-million-author-ring/public/img/gatcha",
+    "last_opened_file_path": "C:/projects/kairisei-million-author-ring/public/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
+    "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "C:\\projects\\kairisei-million-author-ring\\node_modules\\eslint",
     "node.js.selected.package.standard": "",
+    "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.build.executor": "Run",
@@ -44,11 +46,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\kairisei-million-author-ring\public\img" />
+      <recent name="C:\projects\kairisei-million-author-ring\public\img\raid" />
       <recent name="C:\projects\kairisei-million-author-ring\public\img\gatcha" />
       <recent name="C:\projects\kairisei-million-author-ring\public\img\cards" />
       <recent name="C:\projects\kairisei-million-author-ring\public\img\cards-mini" />
-      <recent name="C:\projects\kairisei-million-author-ring\public\img\etc" />
-      <recent name="C:\projects\kairisei-million-author-ring\public\img\raid" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projects\kairisei-million-author-ring\src\app\services\raid" />
@@ -105,7 +107,8 @@
       <workItem from="1732823088418" duration="20949000" />
       <workItem from="1732896005857" duration="8340000" />
       <workItem from="1733028887799" duration="21117000" />
-      <workItem from="1733102134860" duration="12016000" />
+      <workItem from="1733102134860" duration="12630000" />
+      <workItem from="1733181559937" duration="10059000" />
     </task>
     <servers />
   </component>

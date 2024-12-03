@@ -1,15 +1,34 @@
 {
+  "env": {
+    "browser": true
+  },
   "extends": [
-    "next/core-web-vitals",
-    "next/typescript",
-    "plugin:@next/next/recommended"
+    "airbnb",
+    "airbnb-typescript",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
   ],
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
   "rules": {
+    "no-unused-vars": "off",
+    "no-undef": "error",
     "no-console": "warn",
     "@typescript-eslint/no-duplicate-enum-values": "off",
     "no-dupe-class-members": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-unused-vars": "off"
+    "@typescript-eslint/no-unused-vars": "off",
+    "import/extensions": "off",
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/alt-text": "off",
+    "consistent-return": "off",
+    "import/prefer-default-export": "off",
+    "no-alert": "off",
+    "jsx-a11y/label-has-associated-control": "off"
   }
 }
 

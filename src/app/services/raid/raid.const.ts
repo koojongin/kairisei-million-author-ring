@@ -1,4 +1,5 @@
 import { MARaid } from '@/app/services/raid/raid.interface'
+import { MAElementType } from '@/app/const/cards'
 
 export const OFFNIL: MARaid = {
   titleThumbnail: '/img/raid/1.png',
@@ -10,14 +11,18 @@ export const OFFNIL: MARaid = {
       parts: [
         {
           name: '오른쪽 발',
-          element: 'fire',
-          level: 65,
-          life: 63036,
-          damageOfPhysical: 3673,
-          damageOfSpell: 68,
-          evade: 68,
-          armorOfPhysical: 849,
-          armorOfSpell: 772,
+          attributes: {
+            초급: {
+              element: MAElementType.불,
+              level: 65,
+              life: 63036,
+              damageOfPhysical: 3673,
+              damageOfSpell: 68,
+              regeneration: 68,
+              armorOfPhysical: 849,
+              armorOfSpell: 772,
+            },
+          },
           skills: [
             {
               name: '격노의 상처 : 강',
@@ -31,14 +36,18 @@ export const OFFNIL: MARaid = {
         },
         {
           name: '오프닐',
-          element: 'fire',
-          level: 65,
-          life: 238758,
-          damageOfPhysical: 74,
-          damageOfSpell: 3290,
-          evade: 74,
-          armorOfPhysical: 1209,
-          armorOfSpell: 1864,
+          attributes: {
+            초급: {
+              element: MAElementType.불,
+              level: 65,
+              life: 238758,
+              damageOfPhysical: 74,
+              damageOfSpell: 3290,
+              regeneration: 74,
+              armorOfPhysical: 1209,
+              armorOfSpell: 1864,
+            },
+          },
           skills: [
             {
               name: '용의 불꽃 : 강',
@@ -56,14 +65,18 @@ export const OFFNIL: MARaid = {
         },
         {
           name: '왼쪽 발',
-          element: 'fire',
-          level: 65,
-          life: 68598,
-          damageOfPhysical: 68,
-          damageOfSpell: 3467,
-          evade: 68,
-          armorOfPhysical: 772,
-          armorOfSpell: 849,
+          attributes: {
+            초급: {
+              element: MAElementType.불,
+              level: 65,
+              life: 68598,
+              damageOfPhysical: 68,
+              damageOfSpell: 3467,
+              regeneration: 68,
+              armorOfPhysical: 772,
+              armorOfSpell: 849,
+            },
+          },
           skills: [
             {
               name: '파열의 강습',
@@ -84,14 +97,18 @@ export const OFFNIL: MARaid = {
       parts: [
         {
           name: '오른쪽 발',
-          element: 'fire',
-          level: 65,
-          life: 63036,
-          damageOfPhysical: 3673,
-          damageOfSpell: 68,
-          evade: 68,
-          armorOfPhysical: 849,
-          armorOfSpell: 772,
+          attributes: {
+            초급: {
+              element: MAElementType.불,
+              level: 65,
+              life: 63036,
+              damageOfPhysical: 3673,
+              damageOfSpell: 68,
+              regeneration: 68,
+              armorOfPhysical: 849,
+              armorOfSpell: 772,
+            },
+          },
           skills: [
             {
               name: '격노의 상처 : 강',
@@ -105,14 +122,18 @@ export const OFFNIL: MARaid = {
         },
         {
           name: '오프닐',
-          element: 'fire',
-          level: 65,
-          life: 238758,
-          damageOfPhysical: 74,
-          damageOfSpell: 3290,
-          evade: 74,
-          armorOfPhysical: 1209,
-          armorOfSpell: 1864,
+          attributes: {
+            초급: {
+              element: MAElementType.불,
+              level: 65,
+              life: 238758,
+              damageOfPhysical: 74,
+              damageOfSpell: 3290,
+              regeneration: 74,
+              armorOfPhysical: 1209,
+              armorOfSpell: 1864,
+            },
+          },
           skills: [
             {
               name: '용의 독 : 강',
@@ -134,14 +155,18 @@ export const OFFNIL: MARaid = {
         },
         {
           name: '왼쪽 발',
-          element: 'fire',
-          level: 65,
-          life: 68598,
-          damageOfPhysical: 68,
-          damageOfSpell: 3467,
-          evade: 68,
-          armorOfPhysical: 772,
-          armorOfSpell: 849,
+          attributes: {
+            초급: {
+              element: MAElementType.불,
+              level: 65,
+              life: 68598,
+              damageOfPhysical: 68,
+              damageOfSpell: 3467,
+              regeneration: 68,
+              armorOfPhysical: 772,
+              armorOfSpell: 849,
+            },
+          },
           skills: [
             {
               name: '파열의 강습: 절',
@@ -168,6 +193,7 @@ export const PHONE_DARE_TAN: MARaid = {
       parts: [
         {
           name: '팔보호대',
+          attributes: {},
           skills: [
             {
               name: '충성의 격려 : 충',
@@ -185,6 +211,7 @@ export const PHONE_DARE_TAN: MARaid = {
         },
         {
           name: '폰 데어 탄',
+          attributes: {},
           skills: [
             {
               name: '명예의 결투 : 충',
@@ -206,6 +233,7 @@ export const PHONE_DARE_TAN: MARaid = {
         },
         {
           name: '소총',
+          attributes: {},
           skills: [
             {
               name: '용기의 분쇄',
@@ -226,6 +254,7 @@ export const PHONE_DARE_TAN: MARaid = {
       parts: [
         {
           name: '팔 보호대',
+          attributes: {},
           skills: [
             {
               name: '충성의 격려 : 충',
@@ -243,6 +272,7 @@ export const PHONE_DARE_TAN: MARaid = {
         },
         {
           name: '폰 데어 탄',
+          attributes: {},
           skills: [
             {
               name: '참수의 결투 : 충',
@@ -276,6 +306,7 @@ export const PHONE_DARE_TAN: MARaid = {
         },
         {
           name: '지휘용 칼',
+          attributes: {},
           skills: [
             {
               name: '용맹한 돌진',
@@ -288,6 +319,191 @@ export const PHONE_DARE_TAN: MARaid = {
             {
               name: '용기의 분쇄',
               desc: '격파될 시 자신의 HP 100%만큼 폰 데어 탄 본체의 HP를 감소시킵니다.',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+}
+export const JORMUNGANDR: MARaid = {
+  titleThumbnail: '/img/raid/3.png',
+  name: '요르문간드',
+  rewards: {
+    normal: [],
+    fame: [],
+  },
+  levels: [
+    {
+      name: '1단계',
+      desc: '-',
+      parts: [
+        {
+          name: '완력의 방패',
+          attributes: {
+            중급: {
+              element: MAElementType.불,
+              level: 25,
+              life: 56250,
+              damageOfPhysical: 138,
+              damageOfSpell: 138,
+              regeneration: 138,
+              armorOfPhysical: 312,
+              armorOfSpell: 312,
+            },
+          },
+          skills: [
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+          ],
+        },
+        {
+          name: '요르문간드',
+          attributes: {
+            중급: {
+              element: MAElementType.어둠,
+              level: 25,
+              life: 57419,
+              damageOfPhysical: 1053,
+              damageOfSpell: 1053,
+              regeneration: 60,
+              armorOfPhysical: 902,
+              armorOfSpell: 902,
+            },
+          },
+          skills: [
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+          ],
+        },
+        {
+          name: '영혼의 방패',
+          attributes: {
+            중급: {
+              element: MAElementType.얼음,
+              level: 25,
+              life: 56250,
+              damageOfPhysical: 138,
+              damageOfSpell: 138,
+              regeneration: 138,
+              armorOfPhysical: 312,
+              armorOfSpell: 312,
+            },
+          },
+          skills: [
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: '2단계',
+      desc: '-',
+      parts: [
+        {
+          name: '번개의 기둥',
+          attributes: {
+            중급: {
+              element: MAElementType.불,
+              level: 25,
+              life: 57419,
+              damageOfPhysical: 1053,
+              damageOfSpell: 1053,
+              regeneration: 60,
+              armorOfPhysical: 902,
+              armorOfSpell: 902,
+            },
+          },
+          skills: [
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+          ],
+        },
+        {
+          name: '요르문간드',
+          attributes: {
+            중급: {
+              element: MAElementType.불,
+              level: 25,
+              life: 57419,
+              damageOfPhysical: 1053,
+              damageOfSpell: 1053,
+              regeneration: 60,
+              armorOfPhysical: 902,
+              armorOfSpell: 902,
+            },
+          },
+          skills: [
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+          ],
+        },
+        {
+          name: '우레의 기둥',
+          attributes: {},
+          skills: [
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
             },
           ],
         },
