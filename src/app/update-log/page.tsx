@@ -3,7 +3,7 @@ export default function UpdateLogPage() {
     <div className="w-full flex shadow">
       <div className="text-[14px] text-gray-800 flex flex-col items-start justify-start [&>div]:flex [&>div]:flex-col [&>div]:p-[10px] bg-white/70 [&>div]:items-start w-full">
         <div>
-          <div className="font-bold">2024-12-02 14:42:03</div>
+          <div className="font-bold">2024-12-03 17:43:03</div>
           <div className="flex flex-col items-start">
             <div>이미지 마우스 유지시 카드 전체 이름 보이도록 수정</div>
             <div>페이지 레이아웃 구조 세로형으로 변경</div>

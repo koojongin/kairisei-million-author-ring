@@ -27,7 +27,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ToolWindowDuplicates.ShowToolbar": "false",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/projects/kairisei-million-author-ring/public/img/items",
+    "last_opened_file_path": "C:/projects/kairisei-million-author-ring/public/img/gatcha",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
@@ -47,11 +47,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\kairisei-million-author-ring\public\img\gatcha" />
+      <recent name="C:\projects\kairisei-million-author-ring\public\img\cards-mini" />
+      <recent name="C:\projects\kairisei-million-author-ring\public\img\cards" />
+      <recent name="C:\projects\kairisei-million-author-ring\src\app\const\gatcha" />
       <recent name="C:\projects\kairisei-million-author-ring\public\img\items" />
-      <recent name="C:\projects\kairisei-million-author-ring\public\img\etc" />
-      <recent name="C:\projects\kairisei-million-author-ring\src\app\services\raid" />
-      <recent name="C:\projects\kairisei-million-author-ring\public\img\raid" />
-      <recent name="C:\projects\kairisei-million-author-ring\public\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projects\kairisei-million-author-ring\src\app\services\raid" />
@@ -109,7 +109,7 @@
       <workItem from="1732896005857" duration="8340000" />
       <workItem from="1733028887799" duration="21117000" />
       <workItem from="1733102134860" duration="12630000" />
-      <workItem from="1733181559937" duration="29222000" />
+      <workItem from="1733181559937" duration="35865000" />
     </task>
     <servers />
   </component>

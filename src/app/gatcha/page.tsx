@@ -1,14 +1,55 @@
 'use client'
 
 import { useState } from 'react'
-import { GATCHA_001, GatchaTitle, getRandomCard } from '@/app/const/cards-gatcha'
+import { GATCHA_TITLES, GatchaTitle, getRandomCard } from '@/app/const/cards-gatcha'
 import createKey from '@/app/services/key-generator'
 import { MACardBox } from '@/app/components/card/ma-card-box'
 import { CardImageSize } from '@/app/components/card/ma-card.enum'
 import { MACard, MACardDict, MAGrade } from '@/app/const/cards'
 
 export default function GatchaSimulatorPage() {
-  const gatchaTitles = [GATCHA_001]
+  const gatchaTitles = GATCHA_TITLES
+
+  /* const a = [
+    { a: '수호/빛/광기형 부패한 수호자' },
+  ]
+  const cards = Object.values(MACardDict)
+  const test = {
+    mr5: [],
+    mr4: [],
+    ur3: [],
+    ur2: [],
+    sr3: [],
+    sr2: [],
+    sr1: [],
+    r: [],
+    n: [],
+  }
+  const result = a.map((b) => {
+    const str = b.a.split('/')
+    const data = { job: str[0], type: str[1], name: str[2] }
+
+    const cc = cards
+      .map((c, index) => {
+        if (c.name === data.name && c.jobKind === data.job) {
+          if (c.grade === MAGrade.MR && c.star === 5) test.mr5.push(index + 1)
+          if (c.grade === MAGrade.MR && c.star === 4) test.mr4.push(index + 1)
+          if (c.grade === MAGrade.UR && c.star === 3) test.ur3.push(index + 1)
+          if (c.grade === MAGrade.UR && c.star === 2) test.ur2.push(index + 1)
+          if (c.grade === MAGrade.SR && c.star === 3) test.sr3.push(index + 1)
+          if (c.grade === MAGrade.SR && c.star === 2) test.sr2.push(index + 1)
+          if (c.grade === MAGrade.SR && c.star === 1) test.sr1.push(index + 1)
+          if (c.grade === MAGrade.R) test.r.push(index + 1)
+          if (c.grade === MAGrade.N) test.n.push(index + 1)
+          return index + 1
+        }
+        return 0
+      })
+      .filter((d) => !!d)[0]
+    return cc
+  })
+
+  console.log(test) */
 
   const [roledCount, setRoledCount] = useState(0)
   const [accumulatedCards, setAccumulatedCards] = useState<
@@ -113,7 +154,7 @@ export default function GatchaSimulatorPage() {
               </div>
             </div>
             <div className="flex flex-wrap border p-[10px] justify-center">
-              {roledCards && (
+              {roledCards?.length > 0 && (
                 <div>
                   <div>뽑힌 카드 목록</div>
                   <div className="flex flex-wrap gap-[4px]">
@@ -181,6 +222,31 @@ export default function GatchaSimulatorPage() {
                   </div>
                 </div>
               )}
+            </div>
+          </div>
+          <hr className="border-gray-800 my-[20px]" />
+          <div className="flex flex-col gap-[10px]">
+            <div className="font-bold text-[20px]">UP 정보</div>
+            <div className="flex flex-col gap-[15px]">
+              {!title.up && <div>등록된 UP 정보 없음</div>}
+              {title.up?.map((upData) => {
+                return (
+                  <div key={createKey()}>
+                    <div className="border-b border-gray-400 border-dashed inline-block mb-[5px]">
+                      확률UP - {upData.grade} {upData.star}성 등장 확률의 {upData.rate}%
+                    </div>
+                    <div className="flex flex-wrap gap-[4px]">
+                      {upData.list.map((upDataCardNumber) => {
+                        return (
+                          <div key={createKey()}>
+                            <MACardBox number={upDataCardNumber} size={CardImageSize.XSMALL} />
+                          </div>
+                        )
+                      })}
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
           <hr className="border-gray-800 my-[20px]" />

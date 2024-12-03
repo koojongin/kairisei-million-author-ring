@@ -1,9 +1,5 @@
 import { MACard, MACardDict } from '@/app/const/cards'
-import {
-  getCardElementMarkString,
-  getElementTypeEn,
-  getJobKindEn,
-} from '@/app/services/card.translate'
+import { getCardElementMarkString } from '@/app/services/card.translate'
 import createKey from '@/app/services/key-generator'
 import { CardImageSize } from '@/app/components/card/ma-card.enum'
 
@@ -12,6 +8,7 @@ export function MACardBox({ number, size = CardImageSize.LARGE }: any) {
   const SMALL_IMG_PATH = '/cards-mini'
 
   const card: MACard = MACardDict[number]
+  if (!card) return <div>뭔데 왜 없음?{number}</div>
 
   return (
     <div

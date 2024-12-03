@@ -5,7 +5,7 @@ import { MACardDict } from '@/app/const/cards'
 import { MACardBox } from '@/app/components/card/ma-card-box'
 import createKey from '@/app/services/key-generator'
 
-const TOTAL_CARDS_COUNT = 107
+const TOTAL_CARDS_COUNT = 108
 export function MACardList({
   checkedCosts,
   checkedGrades,

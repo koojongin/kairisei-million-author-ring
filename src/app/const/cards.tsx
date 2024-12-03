@@ -1014,4 +1014,13 @@ export const MACardDict: {
     elementType: MAElementType.빛,
     star: 1,
   },
+  108: {
+    name: '원정형 리페',
+    cost: 2,
+    skillType: MASkillType.약,
+    jobKind: MAJobKind.강습,
+    grade: MAGrade.SR,
+    elementType: MAElementType.불,
+    star: 1,
+  },
 }
