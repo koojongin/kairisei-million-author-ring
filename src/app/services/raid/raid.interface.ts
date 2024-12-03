@@ -1,4 +1,5 @@
-import { MAElementType } from '@/app/const/cards'
+import { MAElementType, MAGrade } from '@/app/const/cards'
+import { MAObjectType } from '@/app/services/ma.enum'
 
 export enum MADifficulty {
   초급 = '초급',
@@ -8,13 +9,28 @@ export enum MADifficulty {
   초특급 = '초특급',
 }
 
+export interface MARaidReward {
+  number: number
+  type: MAObjectType
+  amount?: number
+  isFirstClear?: boolean
+  grade: MAGrade
+}
+
+export enum MARaidRewardType {
+  일반 = '일반',
+  명성 = '명성',
+}
+
 export interface MARaid {
   titleThumbnail: string
   name: string
   levels: MARaidLevel[]
   rewards?: {
-    normal: any[]
-    fame: any[]
+    [key: string]: {
+      normal: MARaidReward[]
+      fame: MARaidReward[]
+    }
   }
 }
 

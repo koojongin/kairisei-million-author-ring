@@ -1,0 +1,278 @@
+import { MARaid } from '@/app/services/raid/raid.interface'
+import { MAElementType, MAGrade } from '@/app/const/cards'
+import { MAObjectType } from '@/app/services/ma.enum'
+
+export const PHONE_ASHE: MARaid = {
+  titleThumbnail: '/img/raid/4.png',
+  name: '폰 애쉬',
+  rewards: {
+    초급: {
+      normal: [
+        { number: 15, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 2, type: MAObjectType.ITEM, amount: 1, grade: MAGrade.MR, isFirstClear: true },
+        { number: 1, type: MAObjectType.ITEM, amount: 1, grade: MAGrade.SR, isFirstClear: true },
+        { number: 1, type: MAObjectType.ITEM, grade: MAGrade.SR },
+        { number: 12, type: MAObjectType.ITEM, grade: MAGrade.UR }, // 치아리
+        { number: 10, type: MAObjectType.ITEM, grade: MAGrade.N },
+        { number: 11, type: MAObjectType.ITEM, grade: MAGrade.N },
+        { number: 8, type: MAObjectType.ITEM, grade: MAGrade.SR },
+      ],
+      fame: [
+        { number: 16, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 18, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 21, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 22, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 15, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 9, type: MAObjectType.ITEM, grade: MAGrade.MR },
+        { number: 1, type: MAObjectType.ITEM, grade: MAGrade.SR },
+      ],
+    },
+    중급: {
+      normal: [
+        { number: 15, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 2, type: MAObjectType.ITEM, amount: 50, grade: MAGrade.MR, isFirstClear: true },
+        { number: 1, type: MAObjectType.ITEM, amount: 80, grade: MAGrade.SR, isFirstClear: true },
+        { number: 1, type: MAObjectType.ITEM, grade: MAGrade.SR },
+        { number: 12, type: MAObjectType.ITEM, grade: MAGrade.UR }, // 치아리
+        { number: 5, type: MAObjectType.ITEM, grade: MAGrade.R },
+        { number: 7, type: MAObjectType.ITEM, grade: MAGrade.R },
+        { number: 10, type: MAObjectType.ITEM, grade: MAGrade.N },
+        { number: 11, type: MAObjectType.ITEM, grade: MAGrade.N },
+        { number: 8, type: MAObjectType.ITEM, grade: MAGrade.SR },
+      ],
+      fame: [
+        { number: 16, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 18, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 21, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 22, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 15, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 9, type: MAObjectType.ITEM, grade: MAGrade.MR },
+        { number: 1, type: MAObjectType.ITEM, grade: MAGrade.SR },
+      ],
+    },
+    상급: {
+      normal: [
+        { number: 15, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 2, type: MAObjectType.ITEM, amount: 80, grade: MAGrade.MR, isFirstClear: true },
+        { number: 1, type: MAObjectType.ITEM, amount: 100, grade: MAGrade.SR, isFirstClear: true },
+        { number: 1, type: MAObjectType.ITEM, grade: MAGrade.SR },
+        { number: 3, type: MAObjectType.ITEM, grade: MAGrade.UR },
+        { number: 4, type: MAObjectType.ITEM, grade: MAGrade.SR },
+        { number: 6, type: MAObjectType.ITEM, grade: MAGrade.SR },
+        { number: 5, type: MAObjectType.ITEM, grade: MAGrade.R },
+        { number: 7, type: MAObjectType.ITEM, grade: MAGrade.R },
+        { number: 8, type: MAObjectType.ITEM, grade: MAGrade.R },
+      ],
+      fame: [
+        { number: 16, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 18, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 21, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 22, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 15, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 9, type: MAObjectType.ITEM, grade: MAGrade.MR },
+        { number: 1, type: MAObjectType.ITEM, grade: MAGrade.SR },
+      ],
+    },
+    특급: {
+      normal: [
+        { number: 15, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 2, type: MAObjectType.ITEM, amount: 100, grade: MAGrade.MR, isFirstClear: true },
+        { number: 1, type: MAObjectType.ITEM, amount: 160, grade: MAGrade.SR, isFirstClear: true },
+        { number: 1, type: MAObjectType.ITEM, grade: MAGrade.SR },
+        { number: 3, type: MAObjectType.ITEM, grade: MAGrade.UR },
+        { number: 4, type: MAObjectType.ITEM, grade: MAGrade.SR },
+        { number: 6, type: MAObjectType.ITEM, grade: MAGrade.SR },
+        { number: 5, type: MAObjectType.ITEM, grade: MAGrade.R },
+        { number: 7, type: MAObjectType.ITEM, grade: MAGrade.R },
+        { number: 8, type: MAObjectType.ITEM, grade: MAGrade.R },
+      ],
+      fame: [
+        { number: 16, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 18, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 21, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 22, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 15, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 9, type: MAObjectType.ITEM, grade: MAGrade.MR },
+        { number: 1, type: MAObjectType.ITEM, grade: MAGrade.SR },
+      ],
+    },
+    초특급: {
+      normal: [
+        { number: 15, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 2, type: MAObjectType.ITEM, amount: 150, grade: MAGrade.MR, isFirstClear: true },
+        { number: 1, type: MAObjectType.ITEM, amount: 200, grade: MAGrade.SR, isFirstClear: true },
+        { number: 1, type: MAObjectType.ITEM, grade: MAGrade.SR },
+        { number: 3, type: MAObjectType.ITEM, grade: MAGrade.UR },
+        { number: 4, type: MAObjectType.ITEM, grade: MAGrade.SR },
+        { number: 6, type: MAObjectType.ITEM, grade: MAGrade.SR },
+        { number: 5, type: MAObjectType.ITEM, grade: MAGrade.R },
+        { number: 7, type: MAObjectType.ITEM, grade: MAGrade.R },
+        { number: 8, type: MAObjectType.ITEM, grade: MAGrade.R },
+      ],
+      fame: [
+        { number: 16, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 18, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 21, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 22, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 15, type: MAObjectType.CARD, grade: MAGrade.MR },
+        { number: 9, type: MAObjectType.ITEM, grade: MAGrade.MR },
+        { number: 1, type: MAObjectType.ITEM, grade: MAGrade.SR },
+      ],
+    },
+  },
+  levels: [
+    {
+      name: '1단계',
+      desc: '세스테스 제국 12군단의 부지휘관이자 교활하고 수단과 방법을 가리지 않는 소녀. 승리를 위해서는 그 어떠한 대가도 치를 수 있다.',
+      parts: [
+        {
+          name: '동력 지팡이',
+          attributes: {
+            초급: {
+              element: MAElementType.어둠,
+              level: 19,
+              life: 32726,
+              damageOfPhysical: 21,
+              damageOfSpell: 692,
+              regeneration: 465,
+              armorOfPhysical: 535,
+              armorOfSpell: 316,
+            },
+            중급: {
+              element: MAElementType.어둠,
+              level: 33,
+              life: 54364,
+              damageOfPhysical: 35,
+              damageOfSpell: 1150,
+              regeneration: 773,
+              armorOfPhysical: 889,
+              armorOfSpell: 525,
+            },
+            상급: {
+              element: MAElementType.어둠,
+              level: 47,
+              life: 76003,
+              damageOfPhysical: 50,
+              damageOfSpell: 1608,
+              regeneration: 1080,
+              armorOfPhysical: 1244,
+              armorOfSpell: 735,
+            },
+          },
+          skills: [
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+          ],
+        },
+        {
+          name: '폰 애쉬',
+          attributes: {
+            초급: {
+              element: MAElementType.어둠,
+              level: 19,
+              life: 69222,
+              damageOfPhysical: 0,
+              damageOfSpell: 914,
+              regeneration: 93,
+              armorOfPhysical: 351,
+              armorOfSpell: 773,
+            },
+            중급: {
+              element: MAElementType.어둠,
+              level: 33,
+              life: 114991,
+              damageOfPhysical: 0,
+              damageOfSpell: 1519,
+              regeneration: 155,
+              armorOfPhysical: 584,
+              armorOfSpell: 1285,
+            },
+            상급: {
+              element: MAElementType.어둠,
+              level: 47,
+              life: 160760,
+              damageOfPhysical: 0,
+              damageOfSpell: 2123,
+              regeneration: 217,
+              armorOfPhysical: 816,
+              armorOfSpell: 1797,
+            },
+          },
+          skills: [
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+          ],
+        },
+        {
+          name: '권총',
+          attributes: {
+            초급: {
+              element: MAElementType.어둠,
+              level: 19,
+              life: 39739,
+              damageOfPhysical: 43,
+              damageOfSpell: 887,
+              regeneration: 54,
+              armorOfPhysical: 316,
+              armorOfSpell: 681,
+            },
+            중급: {
+              element: MAElementType.어둠,
+              level: 33,
+              life: 66014,
+              damageOfPhysical: 71,
+              damageOfSpell: 1474,
+              regeneration: 90,
+              armorOfPhysical: 525,
+              armorOfSpell: 1132,
+            },
+            상급: {
+              element: MAElementType.어둠,
+              level: 47,
+              life: 92289,
+              damageOfPhysical: 100,
+              damageOfSpell: 2060,
+              regeneration: 125,
+              armorOfPhysical: 735,
+              armorOfSpell: 1583,
+            },
+          },
+          skills: [
+            {
+              name: '-',
+              desc: '-',
+            },
+            {
+              name: '-',
+              desc: '-',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+}

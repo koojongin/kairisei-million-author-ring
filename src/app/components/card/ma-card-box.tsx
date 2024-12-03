@@ -1,5 +1,9 @@
 import { MACard, MACardDict } from '@/app/const/cards'
-import { getElementTypeEn, getJobKindEn } from '@/app/services/card.translate'
+import {
+  getCardElementMarkString,
+  getElementTypeEn,
+  getJobKindEn,
+} from '@/app/services/card.translate'
 import createKey from '@/app/services/key-generator'
 import { CardImageSize } from '@/app/components/card/ma-card.enum'
 
@@ -8,10 +12,6 @@ export function MACardBox({ number, size = CardImageSize.LARGE }: any) {
   const SMALL_IMG_PATH = '/cards-mini'
 
   const card: MACard = MACardDict[number]
-
-  const getCardElementMarkString = (targetCard: MACard) => {
-    return `${getElementTypeEn(targetCard.elementType)}-${getJobKindEn(targetCard.jobKind)}`
-  }
 
   return (
     <div

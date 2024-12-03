@@ -179,7 +179,7 @@ export const MACardDict: {
     star: 4,
   },
   16: {
-    name: '말설형 가희 아서',
+    name: '말설형 가희 아서', // 18 22 16 21
     cost: 4,
     skillType: MASkillType.마,
     jobKind: MAJobKind.지원,

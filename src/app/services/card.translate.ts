@@ -1,4 +1,4 @@
-import { MAElementType, MAJobKind } from '@/app/const/cards'
+import { MACard, MAElementType, MAJobKind } from '@/app/const/cards'
 
 export const getElementTypeEn = (elementType: MAElementType): string => {
   let convertedElementType: string = elementType
@@ -34,4 +34,8 @@ export const getJobKindEn = (type: MAJobKind): string => {
   }
 
   return convertedType
+}
+
+export const getCardElementMarkString = (targetCard: MACard) => {
+  return `${getElementTypeEn(targetCard.elementType)}-${getJobKindEn(targetCard.jobKind)}`
 }
