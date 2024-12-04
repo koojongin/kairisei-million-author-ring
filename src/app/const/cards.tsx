@@ -7,6 +7,12 @@ export enum MASkillType {
   치 = '치',
 }
 
+export enum MACharacter {
+  부호 = '부호',
+  용병 = '용병',
+  가희 = '가희',
+  도적 = '도적',
+}
 export enum MAJobKind {
   강습 = '강습',
   지원 = '지원',

@@ -3,6 +3,13 @@ export default function UpdateLogPage() {
     <div className="w-full flex shadow">
       <div className="text-[14px] text-gray-800 flex flex-col items-start justify-start [&>div]:flex [&>div]:flex-col [&>div]:p-[10px] bg-white/70 [&>div]:items-start w-full">
         <div>
+          <div className="font-bold">2024-12-04 14:24:03</div>
+          <div className="flex flex-col items-start">
+            <div>연합 작전 추천 덱 추가</div>
+          </div>
+        </div>
+
+        <div>
           <div className="font-bold">2024-12-04 13:36:03</div>
           <div className="flex flex-col items-start">
             <div>연합 작전 데이터 추가</div>

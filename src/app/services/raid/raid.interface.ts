@@ -1,4 +1,4 @@
-import { MAElementType, MAGrade } from '@/app/const/cards'
+import { MACharacter, MAElementType, MAGrade } from '@/app/const/cards'
 import { MAObjectType } from '@/app/services/ma.enum'
 
 export enum MADifficulty {
@@ -26,6 +26,11 @@ export interface MARaid {
   titleThumbnail: string
   name: string
   levels: MARaidLevel[]
+  recommendationDeck?: {
+    [key: string | MACharacter]: {
+      list: number[]
+    }
+  }
   rewards?: {
     [key: string]: {
       normal: MARaidReward[]

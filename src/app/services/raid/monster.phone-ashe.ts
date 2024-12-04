@@ -3,6 +3,12 @@ import { MAElementType, MAGrade } from '@/app/const/cards'
 import { MAObjectType } from '@/app/services/ma.enum'
 
 export const PHONE_ASHE: MARaid = {
+  recommendationDeck: {
+    용병: { list: [9, 34, 35, 58, 57, 79, 72, 10, 14, 24] },
+    가희: { list: [17, 29, 25, 13, 38, 61, 67, 52, 4, 86] },
+    도적: { list: [35, 58, 57, 79, 72, 10, 14, 24, 71, 46] },
+    부호: { list: [5, 19, 31, 6, 43, 55, 49, 74, 73, 7] },
+  },
   titleThumbnail: '/img/raid/4.png',
   name: '폰 애쉬',
   rewards: {
