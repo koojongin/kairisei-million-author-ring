@@ -22,15 +22,14 @@ export enum MARaidRewardType {
   명성 = '명성',
 }
 
+export interface RecommendationDeck {
+  list: number[]
+}
 export interface MARaid {
   titleThumbnail: string
   name: string
   levels: MARaidLevel[]
-  recommendationDeck?: {
-    [key: string | MACharacter]: {
-      list: number[]
-    }
-  }
+  recommendationDeck?: { [key: string | MACharacter]: RecommendationDeck }
   rewards?: {
     [key: string]: {
       normal: MARaidReward[]

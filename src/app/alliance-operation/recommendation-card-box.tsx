@@ -3,13 +3,14 @@ import createKey from '@/app/services/key-generator'
 import { MACardBox } from '@/app/components/card/ma-card-box'
 import { CardImageSize } from '@/app/components/card/ma-card.enum'
 import { MACard, MACardDict, MACharacter, MAGrade } from '@/app/const/cards'
+import { RecommendationDeck } from '@/app/services/raid/raid.interface'
 
 export function RecommendationCardBox({
   characterName,
   deck,
 }: {
-  characterName: MACharacter
-  deck
+  characterName: MACharacter | string
+  deck: RecommendationDeck
 }) {
   const cards = deck.list.map((cardNumber) => ({ ...MACardDict[cardNumber], number: cardNumber }))
 

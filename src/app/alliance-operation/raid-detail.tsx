@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   MADifficulty,
   MARaid,
@@ -21,11 +22,12 @@ export function RaidDetail({
   level,
 }: {
   raid: MARaid
-  difficulty: MADifficulty
-  level: MARaidLevel
-  setDifficulty
-  setLevel
+  difficulty: MADifficulty | string | undefined
+  level: MARaidLevel | undefined
+  setDifficulty: React.Dispatch<React.SetStateAction<MADifficulty | string>>
+  setLevel: React.Dispatch<React.SetStateAction<MARaidLevel | undefined>>
 }) {
+  if (!raid) return <div />
   return (
     <div className="mt-[10px]">
       <div className="w-full flex flex-col gap-[10px]">
@@ -38,7 +40,7 @@ export function RaidDetail({
           <div className="flex flex-col gap-[14px]">
             {!raid.recommendationDeck && '추천 덱 데이터가 없습니다.'}
             {raid.recommendationDeck &&
-              Object.keys(raid.recommendationDeck).map((characterName: MACharacter) => {
+              Object.keys(raid.recommendationDeck).map((characterName: MACharacter | string) => {
                 const deck = raid.recommendationDeck![characterName]
                 return (
                   <div key={createKey()}>

@@ -1,20 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import {
-  MADifficulty,
-  MARaid,
-  MARaidAttribute,
-  MARaidLevel,
-  MARaidRewardType,
-} from '@/app/services/raid/raid.interface'
-import createKey from '@/app/services/key-generator'
-import { getElementTypeEn } from '@/app/services/card.translate'
+import { MADifficulty, MARaid, MARaidLevel } from '@/app/services/raid/raid.interface'
 import { JORMUNGANDR } from '@/app/services/raid/monster.jormungandr'
 import { PHONE_DARE_TAN } from '@/app/services/raid/monster.phone-dare-tan'
 import { OFFNIL } from '@/app/services/raid/monster.offnil'
 import { PHONE_ASHE } from '@/app/services/raid/monster.phone-ashe'
-import { RaidRewardList } from '@/app/alliance-operation/reward-box'
 import { AllianceOperationGuide } from '@/app/alliance-operation/alliance-operation-guide'
 import { RaidDetail } from '@/app/alliance-operation/raid-detail'
 import { RaidListContainer } from '@/app/alliance-operation/raid-list-container'

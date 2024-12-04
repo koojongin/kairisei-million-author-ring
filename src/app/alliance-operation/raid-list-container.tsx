@@ -1,7 +1,14 @@
+import React, { Dispatch, SetStateAction } from 'react'
 import createKey from '@/app/services/key-generator'
 import { MARaid } from '@/app/services/raid/raid.interface'
 
-export function RaidListContainer({ raids, setRaid }: { setRaid; raids: MARaid[] }) {
+export function RaidListContainer({
+  raids,
+  setRaid,
+}: {
+  raids: MARaid[]
+  setRaid: Dispatch<SetStateAction<MARaid | undefined>>
+}) {
   return (
     <div className="flex gap-[4px]">
       {raids.map((raid) => (
