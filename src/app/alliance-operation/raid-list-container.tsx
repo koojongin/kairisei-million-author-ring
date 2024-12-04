@@ -4,10 +4,10 @@ import { MARaid } from '@/app/services/raid/raid.interface'
 
 export function RaidListContainer({
   raids,
-  setRaid,
+  setSelectedRaid,
 }: {
   raids: MARaid[]
-  setRaid: Dispatch<SetStateAction<MARaid | undefined>>
+  setSelectedRaid: Dispatch<SetStateAction<MARaid | undefined>>
 }) {
   return (
     <div className="flex gap-[4px]">
@@ -16,10 +16,10 @@ export function RaidListContainer({
           key={createKey()}
           className="cursor-pointer border border-gray-800 shadow-md shadow-gray-500 rounded-sm"
           onClick={() => {
-            setRaid(raid)
+            setSelectedRaid(raid)
           }}
         >
-          <img className="w-[200px]" src={raid.titleThumbnail} />
+          <img className="w-[200px]" src={raid.titleThumbnail} alt={raid.name} />
           <div className="text-gray-700 text-[16px] font-bold p-[4px] flex justify-center items-center">
             {raid.name}
           </div>

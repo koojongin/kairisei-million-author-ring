@@ -1,11 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { GATCHA_TITLES, GatchaTitle, getRandomCard } from '@/app/const/cards-gatcha'
+import { GATCHA_TITLES, getRandomCard } from '@/app/const/cards-gatcha'
 import createKey from '@/app/services/key-generator'
 import { MACardBox } from '@/app/components/card/ma-card-box'
 import { CardImageSize } from '@/app/components/card/ma-card.enum'
 import { MACard, MACardDict, MAGrade } from '@/app/const/cards'
+import { GatchaTitle } from '@/app/const/gatcha/gatcha.interface'
 
 export default function GatchaSimulatorPage() {
   const gatchaTitles = GATCHA_TITLES
@@ -60,6 +61,7 @@ export default function GatchaSimulatorPage() {
   const [roledCards, setRoledCards] = useState<Array<MACard & { number: number }> | any>([])
 
   const roleCards = () => {
+    // eslint-disable-next-line no-alert
     if (!title) return alert('선택된 픽업이 없습니다.')
     const roledAmount = 10
     const selectedCards = new Array(roledAmount).fill(1).map(() => getRandomCard(title))

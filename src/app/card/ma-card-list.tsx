@@ -5,7 +5,7 @@ import { MACardDict } from '@/app/const/cards'
 import { MACardBox } from '@/app/components/card/ma-card-box'
 import createKey from '@/app/services/key-generator'
 
-const TOTAL_CARDS_COUNT = 108
+const TOTAL_CARDS_COUNT = 109
 export function MACardList({
   checkedCosts,
   checkedGrades,
@@ -13,7 +13,7 @@ export function MACardList({
   checkedSkillTypes,
   checkedElementTypes,
 }: any) {
-  const [cards, setCards] = useState<Boolean[]>([])
+  const [cards, setCards] = useState<boolean[]>([])
   const [cardSize, setCardSize] = useState<CardImageSize>(CardImageSize.SMALL)
 
   useEffect(() => {

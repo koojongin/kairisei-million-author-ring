@@ -9,9 +9,20 @@ import { PHONE_ASHE } from '@/app/services/raid/monster.phone-ashe'
 import { AllianceOperationGuide } from '@/app/alliance-operation/alliance-operation-guide'
 import { RaidDetail } from '@/app/alliance-operation/raid-detail'
 import { RaidListContainer } from '@/app/alliance-operation/raid-list-container'
+import { UASAHA } from '@/app/services/raid/monster.uasaha'
+import { KARATIN } from '@/app/services/raid/monster.karatin'
+import { CENTER_SYSTEM } from '@/app/services/raid/monster.center-system'
 
 export default function AllianceOperationPage() {
-  const raids: MARaid[] = [OFFNIL, PHONE_DARE_TAN, JORMUNGANDR, PHONE_ASHE]
+  const raids: MARaid[] = [
+    OFFNIL,
+    PHONE_DARE_TAN,
+    JORMUNGANDR,
+    PHONE_ASHE,
+    UASAHA,
+    KARATIN,
+    CENTER_SYSTEM,
+  ]
   const [selectedRaid, setSelectedRaid] = useState<MARaid>()
   const [selectedLevel, setSelectedLevel] = useState<MARaidLevel>()
   const [selectedDifficulty, setSelectedDifficulty] = useState<MADifficulty | string>(
@@ -29,7 +40,7 @@ export default function AllianceOperationPage() {
       </div>
       <AllianceOperationGuide />
 
-      <RaidListContainer raids={raids} setRaid={setSelectedRaid} />
+      <RaidListContainer raids={raids} setSelectedRaid={setSelectedRaid} />
 
       {selectedRaid && (
         <RaidDetail

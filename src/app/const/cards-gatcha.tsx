@@ -2,20 +2,7 @@ import _ from 'lodash'
 import { GATCHA_001 } from '@/app/const/gatcha/gatcha-001'
 import { GATCHA_002 } from '@/app/const/gatcha/gatcha-002'
 import { MACardDict, MAGrade } from '@/app/const/cards'
-
-export interface GatchaTitle {
-  name: string
-  list: GatchaPart[]
-  titleThumbnail: string
-  up?: { rate: number; star: number; grade: MAGrade; list: number[] }[]
-}
-
-export interface GatchaPart {
-  rate: number
-  cards: number[]
-  grade: MAGrade
-  star: number
-}
+import { GatchaTitle } from '@/app/const/gatcha/gatcha.interface'
 
 export const GATCHA_TITLES = [GATCHA_001, GATCHA_002]
 

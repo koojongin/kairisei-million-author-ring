@@ -3,7 +3,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import { Nanum_Gothic } from 'next/font/google'
-import React from 'react' // Roboto와 한글 NotoSans를 사용합니다.
+import React, { ReactNode } from 'react' // Roboto와 한글 NotoSans를 사용합니다.
 import MainSideBar from '@/app/components/main-side-bar/main-side-bar'
 import MainHeaderBar from '@/app/components/main-side-bar/main-header-bar'
 
@@ -35,7 +35,7 @@ const cls = (...classnames: string[]) => {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: ReactNode
 }>) {
   return (
     <html lang="en">

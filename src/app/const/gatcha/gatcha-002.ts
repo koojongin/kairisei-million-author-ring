@@ -1,5 +1,5 @@
-import { GatchaTitle } from '@/app/const/cards-gatcha'
 import { MAGrade } from '@/app/const/cards'
+import { GatchaTitle } from '@/app/const/gatcha/gatcha.interface'
 
 export const GATCHA_002: GatchaTitle = {
   name: '종말의 강림',

@@ -1029,4 +1029,13 @@ export const MACardDict: {
     elementType: MAElementType.불,
     star: 1,
   },
+  109: {
+    name: '전주형 우아사하',
+    cost: 2,
+    skillType: MASkillType.치,
+    jobKind: MAJobKind.지원,
+    grade: MAGrade.MR,
+    elementType: MAElementType.얼음,
+    star: 4,
+  },
 }

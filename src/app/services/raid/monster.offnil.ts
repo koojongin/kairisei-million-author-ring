@@ -1,7 +1,7 @@
 import { MARaid } from '@/app/services/raid/raid.interface'
 import { MAElementType, MAGrade } from '@/app/const/cards'
 import { MAObjectType } from '@/app/services/ma.enum'
-
+// https://ac-p1.namu.la/20241125sac/c1ec718afd029490d53034b8fc9981bb53203a0c394c2c7915c26adddc73fbd1.jpg
 export const OFFNIL: MARaid = {
   titleThumbnail: '/img/raid/1.png',
   name: '오프닐',
