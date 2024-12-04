@@ -138,6 +138,16 @@ export const OFFNIL: MARaid = {
               armorOfPhysical: 849,
               armorOfSpell: 772,
             },
+            특급: {
+              element: MAElementType.불,
+              level: 56,
+              life: 54590,
+              damageOfPhysical: 3181,
+              damageOfSpell: 59,
+              regeneration: 59,
+              armorOfPhysical: 735,
+              armorOfSpell: 669,
+            },
           },
           skills: [
             {
@@ -162,6 +172,16 @@ export const OFFNIL: MARaid = {
               regeneration: 74,
               armorOfPhysical: 1209,
               armorOfSpell: 1864,
+            },
+            특급: {
+              element: MAElementType.불,
+              level: 56,
+              life: 206769,
+              damageOfPhysical: 64,
+              damageOfSpell: 2851,
+              regeneration: 64,
+              armorOfPhysical: 1044,
+              armorOfSpell: 1610,
             },
           },
           skills: [
@@ -191,6 +211,16 @@ export const OFFNIL: MARaid = {
               regeneration: 68,
               armorOfPhysical: 772,
               armorOfSpell: 849,
+            },
+            특급: {
+              element: MAElementType.불,
+              level: 56,
+              life: 59407,
+              damageOfPhysical: 59,
+              damageOfSpell: 3002,
+              regeneration: 59,
+              armorOfPhysical: 669,
+              armorOfSpell: 735,
             },
           },
           skills: [
@@ -224,6 +254,16 @@ export const OFFNIL: MARaid = {
               armorOfPhysical: 849,
               armorOfSpell: 772,
             },
+            특급: {
+              element: MAElementType.불,
+              level: 62,
+              life: 60220,
+              damageOfPhysical: 3509,
+              damageOfSpell: 65,
+              regeneration: 65,
+              armorOfPhysical: 811,
+              armorOfSpell: 738,
+            },
           },
           skills: [
             {
@@ -248,6 +288,16 @@ export const OFFNIL: MARaid = {
               regeneration: 74,
               armorOfPhysical: 1209,
               armorOfSpell: 1864,
+            },
+            특급: {
+              element: MAElementType.어둠,
+              level: 62,
+              life: 330436,
+              damageOfPhysical: 71,
+              damageOfSpell: 3624,
+              regeneration: 71,
+              armorOfPhysical: 639,
+              armorOfSpell: 852,
             },
           },
           skills: [
@@ -281,6 +331,16 @@ export const OFFNIL: MARaid = {
               regeneration: 68,
               armorOfPhysical: 772,
               armorOfSpell: 849,
+            },
+            특급: {
+              element: MAElementType.불,
+              level: 62,
+              life: 65534,
+              damageOfPhysical: 65,
+              damageOfSpell: 3312,
+              regeneration: 65,
+              armorOfPhysical: 738,
+              armorOfSpell: 811,
             },
           },
           skills: [

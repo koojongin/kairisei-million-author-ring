@@ -36,7 +36,7 @@ export function RaidRewardList({
       {(rewardType === MARaidRewardType.일반 ? rewards.normal : rewards.fame).map((object) => {
         const card = MACardDict[object.number]
         return (
-          <div key={createKey()} className="relative">
+          <div key={createKey()} className="relative cursor-pointer">
             <div
               className={`relative w-[70px] h-[70px] flex items-center justify-center border border-gray-300 rounded-md shadow shadow-gray-800/80
               ${object.type === MAObjectType.ITEM && 'overflow-hidden'}`}
@@ -68,6 +68,7 @@ export function RaidRewardList({
                     src={`/img/etc/${getCardElementMarkString(card)}.png`}
                   />
                   <img
+                    title={card.name}
                     src={`/img/cards-mini/${object.number}.png`}
                     className="overflow-hidden rounded-[6px]"
                   />
@@ -79,7 +80,6 @@ export function RaidRewardList({
                           src="/img/etc/star.png"
                           className="absolute w-[14px]"
                           alt={card.name}
-                          title={card.name}
                           style={{
                             left: `${index * 11}px`,
                           }}

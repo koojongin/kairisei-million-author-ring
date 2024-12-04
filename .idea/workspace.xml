@@ -40,7 +40,7 @@
     "npm.build.executor": "Run",
     "npm.dev.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "C:\\projects\\kairisei-million-author-ring\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "Errors",
+    "settings.editor.selected.configurable": "web-ide.project.structure",
     "ts.external.directory.path": "C:\\projects\\kairisei-million-author-ring\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -109,7 +109,8 @@
       <workItem from="1732896005857" duration="8340000" />
       <workItem from="1733028887799" duration="21117000" />
       <workItem from="1733102134860" duration="12630000" />
-      <workItem from="1733181559937" duration="35865000" />
+      <workItem from="1733181559937" duration="37663000" />
+      <workItem from="1733278615612" duration="3074000" />
     </task>
     <servers />
   </component>

@@ -139,8 +139,8 @@ export const JORMUNGANDR: MARaid = {
               armorOfSpell: 312,
             },
             상급: {
-              element: MAElementType.바람,
-              level: 25,
+              element: MAElementType.불,
+              level: 39,
               life: 85230,
               damageOfPhysical: 210,
               damageOfSpell: 210,
@@ -177,6 +177,16 @@ export const JORMUNGANDR: MARaid = {
               armorOfPhysical: 902,
               armorOfSpell: 902,
             },
+            상급: {
+              element: MAElementType.어둠,
+              level: 39,
+              life: 87001,
+              damageOfPhysical: 1595,
+              damageOfSpell: 1595,
+              regeneration: 91,
+              armorOfPhysical: 1367,
+              armorOfSpell: 1367,
+            },
           },
           skills: [
             {
@@ -209,6 +219,16 @@ export const JORMUNGANDR: MARaid = {
               regeneration: 138,
               armorOfPhysical: 312,
               armorOfSpell: 312,
+            },
+            상급: {
+              element: MAElementType.얼음,
+              level: 39,
+              life: 85230,
+              damageOfPhysical: 210,
+              damageOfSpell: 210,
+              regeneration: 210,
+              armorOfPhysical: 473,
+              armorOfSpell: 473,
             },
           },
           skills: [
@@ -283,12 +303,12 @@ export const JORMUNGANDR: MARaid = {
             상급: {
               element: MAElementType.어둠,
               level: 49,
-              life: 305593,
-              damageOfPhysical: 1441,
-              damageOfSpell: 1441,
-              regeneration: 77,
-              armorOfPhysical: 1226,
-              armorOfSpell: 1226,
+              life: 444602,
+              damageOfPhysical: 2097,
+              damageOfSpell: 2097,
+              regeneration: 113,
+              armorOfPhysical: 1784,
+              armorOfSpell: 1784,
             },
           },
           skills: [
