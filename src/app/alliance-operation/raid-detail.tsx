@@ -33,7 +33,7 @@ export function RaidDetail({
         {/* 보스이름 */}
         <div className="text-start text-[24px] font-bold">{raid.name}</div>
 
-        <hr className="border-gray-500" />
+        {/* <hr className="border-gray-500" />
         <div>
           <div className="font-bold text-[24px] mb-[5px]">추천 덱</div>
           {!recommendation && '추천 덱 데이터가 없습니다.'}
@@ -54,7 +54,7 @@ export function RaidDetail({
               </div>
             </div>
           )}
-        </div>
+        </div> */}
 
         <hr className="border-gray-300 border-dashed my-[6px]" />
         {/* 난이도 */}
