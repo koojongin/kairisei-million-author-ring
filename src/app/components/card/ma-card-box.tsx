@@ -36,7 +36,7 @@ export function MACardBox({ number, size = CardImageSize.LARGE }: any) {
             <img
               src={`/img/etc/frame-${card.grade.toLowerCase()}.png`}
               alt={card.name}
-              title={card.name}
+              title={`${card.name}[${number}]`}
             />
           </div>
           <div className="absolute z-10 left-[-8px] top-[-8px] w-[28px]">
@@ -76,6 +76,46 @@ export function MACardBox({ number, size = CardImageSize.LARGE }: any) {
 
       {size === CardImageSize.XSMALL && (
         <div className="relative w-[80px] flex flex-col">
+          <div className="absolute right-[-2px] top-[-5px] w-[20px] z-10">
+            <img src={`/img/etc/cost-${card.cost}.png`} alt={card.name} title={card.name} />
+          </div>
+          <div className="absolute z-[1] shadow-lg">
+            <img
+              src={`/img/etc/frame-${card.grade.toLowerCase()}.png`}
+              alt={card.name}
+              title={card.name}
+            />
+          </div>
+          <div className="absolute z-10 left-[-4px] top-[-4px] w-[20px]">
+            <img
+              src={`/img/etc/${getCardElementMarkString(card)}.png`}
+              alt={card.name}
+              title={card.name}
+            />
+          </div>
+          <div className="relative z-0">
+            <img
+              className="p-[2px] z-0"
+              src={`/img${SMALL_IMG_PATH}/${number}.png`}
+              alt={card.name}
+              title={card.name}
+            />
+          </div>
+          <div className="flex items-center absolute left-[4px] bottom-[7px] bg-black/50 text-white h-[12px] rounded text-[16px] font-bold">
+            <img
+              key={createKey()}
+              src="/img/etc/star.png"
+              className="w-[20px]"
+              alt={card.name}
+              title={card.name}
+            />
+            x{card.star}
+          </div>
+        </div>
+      )}
+
+      {size === CardImageSize.XXSMALL && (
+        <div className="relative w-[70px] flex flex-col">
           <div className="absolute right-[-2px] top-[-5px] w-[20px] z-10">
             <img src={`/img/etc/cost-${card.cost}.png`} alt={card.name} title={card.name} />
           </div>

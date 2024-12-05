@@ -4,10 +4,7 @@ import { useState } from 'react'
 import createKey from '@/app/services/key-generator'
 import { MAElementType, MAGrade, MAJobKind, MASkillType } from '@/app/const/cards'
 import { MACardList } from '@/app/card/ma-card-list'
-
-type CheckBoxGroup = {
-  [key: string]: boolean
-}
+import { CheckBoxGroup } from '@/app/services/ma.enum'
 
 export default function Home() {
   const costs = [5, 4, 3, 2, 1]

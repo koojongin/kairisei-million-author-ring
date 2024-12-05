@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 import {
   MADifficulty,
   MARaid,
@@ -9,8 +9,6 @@ import {
 import createKey from '@/app/services/key-generator'
 import { RaidRewardList } from '@/app/alliance-operation/reward-box'
 import { getElementTypeEn } from '@/app/services/card.translate'
-import { CardImageSize } from '@/app/components/card/ma-card.enum'
-import { MACardBox } from '@/app/components/card/ma-card-box'
 import { RecommendationCardBox } from '@/app/alliance-operation/recommendation-card-box'
 import { MACharacter } from '@/app/const/cards'
 
@@ -24,9 +22,10 @@ export function RaidDetail({
   raid: MARaid
   difficulty: MADifficulty | string | undefined
   level: MARaidLevel | undefined
-  setDifficulty: React.Dispatch<React.SetStateAction<MADifficulty | string>>
-  setLevel: React.Dispatch<React.SetStateAction<MARaidLevel | undefined>>
+  setDifficulty: Dispatch<SetStateAction<MADifficulty | string>>
+  setLevel: Dispatch<SetStateAction<MARaidLevel | undefined>>
 }) {
+  const { recommendation } = raid
   if (!raid) return <div />
   return (
     <div className="mt-[10px]">
@@ -37,18 +36,24 @@ export function RaidDetail({
         <hr className="border-gray-500" />
         <div>
           <div className="font-bold text-[24px] mb-[5px]">추천 덱</div>
-          <div className="flex flex-col gap-[14px]">
-            {!raid.recommendationDeck && '추천 덱 데이터가 없습니다.'}
-            {raid.recommendationDeck &&
-              Object.keys(raid.recommendationDeck).map((characterName: MACharacter | string) => {
-                const deck = raid.recommendationDeck![characterName]
-                return (
-                  <div key={createKey()}>
-                    <RecommendationCardBox characterName={characterName} deck={deck} />
-                  </div>
-                )
-              })}
-          </div>
+          {!recommendation && '추천 덱 데이터가 없습니다.'}
+          {recommendation && (
+            <div className="flex flex-col gap-[14px]">
+              {recommendation.desc && (
+                <div className="" dangerouslySetInnerHTML={{ __html: recommendation.desc }} />
+              )}
+              <div className="flex flex-col gap-[14px]">
+                {Object.keys(recommendation.deck).map((characterName: MACharacter | string) => {
+                  const deck = recommendation.deck![characterName]
+                  return (
+                    <div key={createKey()}>
+                      <RecommendationCardBox characterName={characterName} deck={deck} />
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )}
         </div>
 
         <hr className="border-gray-300 border-dashed my-[6px]" />

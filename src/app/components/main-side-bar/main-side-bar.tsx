@@ -17,6 +17,9 @@ export default function MainSideBar() {
       <div className={menuCss} onClick={() => router.push('/gatcha')}>
         가챠 시뮬
       </div>
+      <div className={menuCss} onClick={() => router.push('/rd')}>
+        추천 덱
+      </div>
       <div className={menuCss} onClick={() => router.push('/update-log')}>
         업데이트 로그
       </div>

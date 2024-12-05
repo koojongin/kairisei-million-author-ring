@@ -10,6 +10,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -27,7 +31,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ToolWindowDuplicates.ShowToolbar": "false",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/projects/kairisei-million-author-ring/public/img/raid",
+    "last_opened_file_path": "C:/projects/kairisei-million-author-ring/node_modules/@types",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
@@ -47,11 +51,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\kairisei-million-author-ring\src\app\rd" />
       <recent name="C:\projects\kairisei-million-author-ring\public\img\raid" />
       <recent name="C:\projects\kairisei-million-author-ring\src\app\services\raid" />
       <recent name="C:\projects\kairisei-million-author-ring\public\img\cards-mini" />
       <recent name="C:\projects\kairisei-million-author-ring\public\img\cards" />
-      <recent name="C:\projects\kairisei-million-author-ring\public\img\gatcha" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projects\kairisei-million-author-ring\src\app\services\raid" />
@@ -87,13 +91,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-985749b364ce-JavaScript-WS-233.15619.15" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -112,7 +109,19 @@
       <workItem from="1733181559937" duration="37663000" />
       <workItem from="1733278615612" duration="12603000" />
       <workItem from="1733302991559" duration="1173000" />
-      <workItem from="1733304178059" duration="2667000" />
+      <workItem from="1733304178059" duration="3491000" />
+      <workItem from="1733357455597" duration="3087000" />
+      <workItem from="1733361113743" duration="628000" />
+      <workItem from="1733361753323" duration="153000" />
+      <workItem from="1733361914364" duration="2611000" />
+      <workItem from="1733367904425" duration="10000" />
+      <workItem from="1733367919918" duration="349000" />
+      <workItem from="1733368272122" duration="9000" />
+      <workItem from="1733368287653" duration="541000" />
+      <workItem from="1733368837906" duration="72000" />
+      <workItem from="1733368916672" duration="319000" />
+      <workItem from="1733369238952" duration="30000" />
+      <workItem from="1733369274940" duration="4613000" />
     </task>
     <servers />
   </component>

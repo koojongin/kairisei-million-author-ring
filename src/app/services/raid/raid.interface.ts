@@ -25,11 +25,17 @@ export enum MARaidRewardType {
 export interface RecommendationDeck {
   list: number[]
 }
+
 export interface MARaid {
   titleThumbnail: string
   name: string
   levels: MARaidLevel[]
-  recommendationDeck?: { [key: string | MACharacter]: RecommendationDeck }
+  recommendation?: {
+    deck: {
+      [key: string | MACharacter]: RecommendationDeck
+    }
+    desc?: string
+  }
   rewards?: {
     [key: string]: {
       normal: MARaidReward[]
