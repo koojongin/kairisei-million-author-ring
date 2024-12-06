@@ -1,0 +1,83 @@
+import { RecruitmentGuild } from '@/app/guild-recruitment/guild-recruitment.interface'
+import { MAServer } from '@/app/guild-recruitment/guild-recruitment.enum'
+
+export const RECRUITING_GUILDS: RecruitmentGuild[] = [
+  {
+    name: '아카라이브',
+    server: MAServer.카멜롯,
+    leader: '이쿼녹스',
+    id: '100014',
+    isNeedApprovement: false,
+    reqLevel: 22,
+    link: 'https://arca.live/b/millionarthur/122395457',
+  },
+  {
+    name: '태양',
+    server: MAServer.브리튼,
+    leader: '',
+    id: '100027',
+    link: 'https://arca.live/b/millionarthur/122460896',
+  },
+  {
+    name: '휘비고',
+    server: MAServer.아발론,
+    leader: '',
+    id: '100076',
+    link: 'https://arca.live/b/millionarthur/122494849',
+  },
+  {
+    name: '링밀아접읍니다',
+    server: MAServer.브리튼,
+    leader: '',
+    id: '100008',
+    link: 'https://arca.live/b/millionarthur/122672194',
+  },
+  {
+    name: '계약',
+    server: MAServer.카멜롯,
+    leader: '카푸치노',
+    isNeedApprovement: true,
+    reqLevel: 22,
+    id: '100092',
+    link: 'https://arca.live/b/millionarthur/122734022',
+  },
+  {
+    name: 'Moneta',
+    server: MAServer.아발론,
+    leader: '',
+    id: '100135',
+    link: 'https://arca.live/b/millionarthur/122758978',
+  },
+  {
+    name: 'HoloMyth',
+    server: MAServer.카멜롯,
+    leader: 'GawrGura',
+    id: '100084',
+    link: 'https://arca.live/b/millionarthur/122825452',
+  },
+  {
+    name: '달빛',
+    server: MAServer.카멜롯,
+    leader: '유에',
+    id: '100144',
+    isNeedApprovement: false,
+    reqLevel: 22,
+    link: 'https://arca.live/b/millionarthur/122962891',
+  },
+  {
+    name: '소악마',
+    server: MAServer.브리튼,
+    leader: '',
+    id: '',
+    link: 'https://arca.live/b/millionarthur/122969613',
+  },
+  {
+    name: '팔라딘',
+    server: MAServer.카멜롯,
+    leader: '팔라딘',
+    id: '100072',
+    link: 'https://arca.live/b/millionarthur/122971523',
+    reqLevel: 22,
+    isNeedApprovement: false,
+  },
+]

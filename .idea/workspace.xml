@@ -122,11 +122,24 @@
       <workItem from="1733368916672" duration="319000" />
       <workItem from="1733369238952" duration="30000" />
       <workItem from="1733369274940" duration="5351000" />
-      <workItem from="1733377272428" duration="2875000" />
+      <workItem from="1733377272428" duration="4579000" />
+      <workItem from="1733470183325" duration="3167000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/guild-recruitment/guild-data.ts</url>
+          <line>64</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
